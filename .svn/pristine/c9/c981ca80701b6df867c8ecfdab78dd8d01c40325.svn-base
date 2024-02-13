@@ -1,0 +1,76 @@
+<div class="wrapper">
+    <div class="wrapper-email">
+        <div class="block-email text-field__group">
+            <div class="text-field__group__email">
+                <img class="text-field__img" src="assets/footer/email.png" />
+                <input class="text-field__input"/>
+            </div>
+
+            <app-button>→ Подписаться</app-button>
+        </div>
+    </div>
+    <div class="wrapper-content">
+        <div class="wrapper-content__left">
+            <img class="content-logo" src="assets/footer/logo.png" />
+            <a class="content-left__text content-company">ООО Трип-Адванс</a>
+            <a class="content-left__text content-phone">+7 (861) 213-23-13</a>
+            <a class="content-left__text content-email">support@tripadvance.ru</a>
+            <a class="content-left__text content-address">Россия</a>
+            <a class="content-left__text content-address">Анапа ул. Кирова 1, офис 1</a>
+            <a class="content-left__text content-personal">Условия использование персональных данных</a>
+            
+        </div>
+        <div class="desktop wrapper-seporator"></div>
+        <div class="wrapper-content__right">
+            <div class="content-block__top">
+                <div class="content-block">
+                    <p class="content-block__title">Услуги</p>
+                    <p class="content-block__item">Внедрение</p>
+                    <p class="content-block__item">Сопровождение</p>
+                    <p class="content-block__item">Программирование</p>
+                    <p class="content-block__item">Обучение</p>
+                </div>
+                <div class="content-block">
+                    <p class="content-block__title">Оборудование</p>
+                    <p class="content-block__item">Онлайн кассы</p>
+                    <p class="content-block__item">Фискальные накопители</p>
+                    <p class="content-block__item">RFID считыватели</p>
+                    <p class="content-block__item">Сканеры</p>
+                    <p class="content-block__item">Электронные замки</p>
+                    <p class="content-block__item">POC терминалы</p>
+                    <p class="content-block__item">Принтеры чеков</p>
+                </div>
+                <div class="content-block">
+                    <p class="content-block__title">Интеграции</p>
+                    <p class="content-block__item">Интеграция 1</p>
+                    <p class="content-block__item">Интеграция 2</p>
+                    <p class="content-block__item">Интеграция 3</p>
+                    <p class="content-block__item">Интеграция 4</p>
+                </div>
+            </div>
+            <div class="content-block__bottom">
+                <div class="content-block">
+                    <p class="content-block__title">Программы</p>
+                    <p class="content-block__item">1С:Предприятие</p>
+                    <p class="content-block__item">Битрикс 24</p>
+                    <p class="content-block__item">liko (Айко)</p>
+                </div>
+                <div class="content-block">
+                    <p class="content-block__title">Разработки</p>
+                    <p class="content-block__item">Модуль бронирования</p>
+                    <p class="content-block__item">Управление Контролем Доступа</p>
+                    <p class="content-block__item">Выгрузка броней в Битрикс 24</p>
+                </div>
+                <div class="content-block">
+                    <p class="content-block__title">О Компании</p>
+                    <p class="content-block__item">О нас</p>
+                    <p class="content-block__item">Партнерам</p>
+                    <p class="content-block__item">Новости</p>
+                    <p class="content-block__item">Вакансии</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

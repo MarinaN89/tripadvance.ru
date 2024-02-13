@@ -1,0 +1,142 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="title">
+            <h1 class="title__text">Нам доверяют</h1>
+            <p class="title__button link">подробнее</p>
+        </div>
+        <!--
+
+        
+        <div class="buttons">
+            <p class="button-left pointer" (click)="this.next()"><</p>
+            <p class="button-right pointer" (click)="this.prev()">></p>
+        </div>
+        -->
+    </div>
+
+    <div class="line"></div>
+
+    <div class="partners">
+        <div class="slide">
+            
+            <div class="image">
+                <img src="assets/partners/Logo hotel 1.jpg"/>
+            </div>
+            <p class="slide-title">Отель "Bora-Bora"</p>
+        </div>
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 2.jpg"/>
+            </div>
+            <p class="slide-title">Отель "Альбатрос"</p>
+        </div>
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 3.jpg"/>
+            </div>
+            <p class="slide-title">Гостевой дом "Durso Tower"</p>
+        </div>
+
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 4.jpg"/>
+            </div>
+            <p class="slide-title">Санаторий "Надежда"</p>
+        </div>
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 5.jpg"/>
+            </div>
+            <p class="slide-title">Отель "Sea Village"</p>
+        </div>
+
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 6.jpg"/>
+            </div>
+            <p class="slide-title">Отель "Белый песок"</p>
+        </div>
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 7.jpg"/>
+            </div>
+            <p class="slide-title">Отель "Pride INN"</p>
+        </div>
+        <div class="slide">
+            <div class="image">
+                <img src="assets/partners/Logo hotel 8.jpg"/>
+            </div>
+            <p class="slide-title">Отель "Orion"</p>
+        </div>
+    </div>
+<!--
+
+
+    <app-slider [countView]="8"  [type]="this.animationType" [duration]="this.animationDuration">
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 1.jpg"/>
+                </div>
+                <p class="slide-title">Отель "Bora-Bora"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 2.jpg"/>
+                </div>
+                <p class="slide-title">Отель "Альбатрос"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 3.jpg"/>
+                </div>
+                <p class="slide-title">Гостевой дом "Durso Tower"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 4.jpg"/>
+                </div>
+                <p class="slide-title">Санаторий "Надежда"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 5.jpg"/>
+                </div>
+                <p class="slide-title">Отель "Sea Village"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 6.jpg"/>
+                </div>
+                <p class="slide-title">Отель "Белый песок"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 7.jpg"/>
+                </div>
+                <p class="slide-title">Отель "Pride INN"</p>
+            </div>
+        </app-slide>
+        <app-slide>
+            <div class="slide">
+                <div class="image">
+                    <img src="assets/partners/Logo hotel 8.jpg"/>
+                </div>
+                <p class="slide-title">Отель "Orion"</p>
+            </div>
+        </app-slide>
+    </app-slider>
+-->
+</div>

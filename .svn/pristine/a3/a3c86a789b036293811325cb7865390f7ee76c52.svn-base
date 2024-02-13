@@ -1,0 +1,27 @@
+
+<!--
+
+
+<div class="new-block__button pointer" (click)="this.navigateTo(this.href)" >
+    <a  class="new-block__button-text" >Подробнее</a>
+    <app-icon class="new-block__button-arrow" name="arrow-right" color="red" size="6px"></app-icon>
+</div>
+-->
+
+<div class="container">
+    <ul>
+      <li>
+        <a class="animated-arrow" href="https://google.com">
+          <span class="the-arrow -left">
+            <span class="shaft"></span>
+          </span>
+          <span class="main">
+            <span class="text"><ng-content></ng-content></span>
+            <span class="the-arrow -right">
+              <span class="shaft"></span>
+            </span>
+          </span>
+        </a>
+      </li>
+    </ul>
+  </div>

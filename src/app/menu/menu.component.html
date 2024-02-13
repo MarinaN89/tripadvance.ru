@@ -1,0 +1,87 @@
+
+
+<div class="line desktop wrapper_desktop">
+
+</div>
+
+<nav class="desktop wrapper_desktop" >  
+ <ul class="wrapper  topmenu ">
+    <li *ngFor="let item of this.site.menu">
+        <div [attr.title]="item.title" (click)="this.setMenuActive($event)" [class.menu_button__active]="this.IsActiveMenu(item)"class="menu_button menu_adaptive__service">     
+            <a (click)="this.navigateTo(item.href)" rel="nofollow" [attr.href]="item.href" class="menu_button__text">{{item.title}}</a>
+            <app-arrow *ngIf="item.items.length > 0" class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+        </div>
+        <ul *ngIf="item.items.length > 0" [class.submenu]="item.items.length > 0">
+            <li *ngFor="let item2 of item.items" class="pointer">
+                <a (click)="this.navigateTo(item2.href)" rel="nofollow" [attr.href]="item2.href" >{{item2.title}}<span class="fa fa-angle-down"></span></a>
+                <ul *ngIf="item2.items.length > 0" class="submenu">
+                    <li *ngFor="let item3 of item2.items">
+                        <a (click)="this.navigateTo(item3.href)" rel="nofollow"  [attr.href]="item3.href">{{item3.title}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <!--
+        <app-select class="menu_button__select menu_adaptive__select desktop" [left]="-120" [showHeader]='false' [items]="this.getMenuAction()" > 
+            <div class="select-action pointer">
+                <p class="select-action__button">...</p>
+            </div>
+        </app-select> 
+
+        -->
+    </ul>
+</nav>
+
+
+<div class="wrapper mobile" #wrapper>
+
+    <header class="nav-top">
+        <app-search></app-search>
+        <span class="hamburger material-icons" id="ham" (click)="this.toggleNav()">menu</span>
+    </header>
+    
+    <nav class="nav-drill">
+      <ul class="nav-items nav-level-1">
+        <li *ngFor="let item of this.site.menu" class="nav-item nav-expand">
+
+            <a [class.nav-expand-link]="item.items.length>0" class="nav-link" [attr.href]="item.href">
+                {{item.title}}
+            </a>
+
+            <ul *ngIf="item.items.length > 0" class="nav-items nav-expand-content">
+                <li class="nav-item">
+                    <a class="nav-link nav-back-link" href="javascript:;">
+                        Назад
+                    </a>
+                </li>
+
+                <li *ngFor="let item2 of item.items" class="nav-item nav-expand">
+                    <a [class.nav-expand-link]="item2.items.length>0" class="nav-link "  [attr.href]="item2.href">
+                        {{item2.title}}
+                    </a>
+                    <ul *ngIf="item2.items.length > 0" class="nav-items nav-expand-content">
+                        <li class="nav-item">
+                            <a class="nav-link nav-back-link" href="javascript:;">
+                                Назад
+                            </a>
+                        </li>
+
+                        <li *ngFor="let item3 of item2.items"  class="nav-item ">
+                            <a  class="nav-link"  [attr.href]="item3.href">
+                                {{item3.title}}
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+        </li>
+      </ul>
+    </nav> 
+</div>
+
+
+

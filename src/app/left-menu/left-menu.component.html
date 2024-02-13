@@ -1,0 +1,64 @@
+<nav  class="nav" >
+    <ul class="nav-items">
+      <li *ngFor="let item of this.site.menu">
+         
+          <a  class="nav-item-root"  [class.nav-expand-link]="item.items.length>0" (click)="this.clickItem(item)">
+
+            <div class="item-content">
+                <div *ngIf="item.href == this.currentURL" class="check-active"></div>
+                <span style="padding-left: 24px"  [class.active]="item.href == this.currentURL">{{item.title}}</span>      
+              </div>
+              
+              <app-arrow style="font-weight: 300; padding-right: 24px;" *ngIf="item.items.length > 0" [setOpen]="this.menuStatuses.get(item) == 'expanded'?true:false"></app-arrow>
+            
+          </a>
+
+
+          <ul *ngIf="item.items.length > 0" class="nav-items" 
+            [@menu-collapsed]="this.menuStatuses.get(item)">
+
+              <li *ngFor="let item2 of item.items" class="">
+                  <a   [class.nav-expand-link]="item2.items.length>0" class="nav-item  nav-subroot" (click)="this.clickItem(item2)">
+                     <div class="item-content">
+                        <div *ngIf="item2.href == this.currentURL" class="check-active"></div>
+                        <span style="padding-left: 34px"  [class.active]="item2.href == this.currentURL">{{item2.title}}</span>      
+                      </div>
+                      
+                      <app-arrow style="font-weight: 300; padding-right: 24px;" *ngIf="item2.items.length > 0" [setOpen]="this.menuStatuses.get(item2) == 'expanded'?true:false"></app-arrow>
+                  </a>
+
+                  <ul *ngIf="item2.items.length > 0" class="nav-items"
+                    [@menu-collapsed]="this.menuStatuses.get(item2)">
+
+                      <li *ngFor="let item3 of item2.items"  class="nav-items">
+                         
+                          <a   class="nav-item"  (click)="this.clickItem(item3)">
+                            <div class="item-content">
+                                <div *ngIf="item3.href == this.currentURL" class="check-active"></div>
+                                <span style="padding-left: 44px"  [class.active]="item3.href == this.currentURL">{{item3.title}}</span>      
+                              </div>
+                          </a>
+
+                          <ul *ngIf="item3.items.length > 0" class="nav-items"
+                            [@menu-collapsed]="this.menuStatuses.get(item3)">
+        
+                              <li *ngFor="let item4 of item3.items"  class="nav-items">
+                                 
+                                  <a   class="nav-item"   (click)="this.clickItem(item4)">
+                                    <div class="item-content">
+                                        <div *ngIf="item4.href == this.currentURL" class="check-active"></div>
+                                        <span style="padding-left: 54px" [class.active]="item4.href == this.currentURL">{{item4.title}}</span>      
+                                      </div>
+                                    
+                                  </a>
+                              </li>
+                          </ul>
+
+                      </li>
+                  </ul>
+              </li>
+          </ul>
+          
+      </li>
+    </ul>
+  </nav>

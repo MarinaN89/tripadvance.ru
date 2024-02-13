@@ -1,0 +1,11 @@
+
+<div class="content-tegs desktop">
+    <p class="content-tegs__title">Теги для поиска:</p>
+    <div class="content-tegs__items">
+        <p *ngFor="let item of this.item" class="content-tegs__item" >
+            {{item.text}}
+        </p>
+    </div>
+    
+
+</div>

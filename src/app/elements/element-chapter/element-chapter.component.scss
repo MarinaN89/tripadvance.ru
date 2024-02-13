@@ -1,0 +1,155 @@
+.wrapper{
+    display: flex;
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    min-height: 400px;
+
+}
+
+.chapter{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.content-lists{
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    padding-left: 24px;
+    padding-top: 24px;
+}
+
+.content-title{
+    margin-bottom: 12px;;
+}
+
+.content-title__text{
+    font-size: 36px;
+}
+
+
+
+.list-row{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
+    flex-direction: column;
+}
+
+.list-text{
+    font-size: 16px;
+    font-weight: 600;
+    margin-left: 0px;
+    margin-bottom: 4px;
+}
+
+.list-point{
+    position: absolute;
+    font-size: 24px;
+    top:-10px;
+}
+
+.content-description{
+    margin-top: 12px;
+}
+
+.content-description__text{
+    font-size: 14px;
+    white-space: pre-line;
+    margin-bottom: 12px;
+}
+
+.content-description__text2{
+    font-size: 14px;
+    margin-top: 24px;
+    white-space: pre-line;
+}
+
+.content-description__link{
+    text-decoration: underline;
+}
+
+.content-description__link:hover{
+    text-decoration: underline;
+    color:#ED3E3E;
+}
+
+.image-backgrond{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;;
+}
+
+.content-buttons{
+    margin-top: 24px;
+    display:flex;
+    align-items: center;
+}
+
+.content-buttons__link{
+    margin-left: 24px;
+    font-size: 14px;
+    text-decoration: underline;
+}
+
+.content-buttons__link:hover{
+    text-decoration: underline;
+    color: #ED3E3E;
+}
+
+
+.buttons-wrapper{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 24px;
+    margin-right: 65px; 
+}
+
+.buttons{
+    display:flex;
+}
+.button-left{
+    padding: 24px 32px;
+    background-color:darkslategrey;
+    color:white;
+    font-size: 24px;
+}
+.button-right{
+    margin-left: 4px;
+    padding: 24px 32px;
+    background-color:darkslategrey;
+    color:white;
+    font-size: 24px;
+}
+
+@media (max-width: 680px){
+    .chapter{
+        display: flex;
+        width: auto;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: center;
+        
+    }
+
+    .image{
+        width: 100%;
+    }
+
+    .image img{
+        object-fit: cover;
+        overflow: clip;
+        width: 100%;
+    }
+}

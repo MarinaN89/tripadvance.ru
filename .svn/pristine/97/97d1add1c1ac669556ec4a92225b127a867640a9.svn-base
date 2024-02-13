@@ -1,0 +1,47 @@
+.wrapper{
+    max-width: 1310px;
+    margin:0 auto;
+    /*border: 1px solid black;*/
+}
+
+.caption__text{
+    font-size: 24px;
+
+}
+
+.description{
+    margin-top:24px;
+}
+.description__text{
+
+}
+
+.content{
+    margin-top:24px;
+    display: flex;
+}
+
+.left{
+    max-width: 320px;
+}
+
+
+
+.left-separator{
+    height:36px;
+}
+
+.right{
+    margin-left:24px;
+    width: 100%;
+}
+
+@media (max-width:680px){
+    .left{
+        display: none;
+    }
+
+    .right{
+        margin-left:0px;
+    }
+}

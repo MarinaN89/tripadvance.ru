@@ -1,0 +1,217 @@
+import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { PLATFORM_ID, APP_ID, Inject } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import {provideClientHydration} from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { IconComponent } from './ui/icon/icon.component';
+import { MenuComponent } from './menu/menu.component';
+import { ArrowComponent } from './ui/arrow/arrow.component';
+import { SelectComponent } from './ui/select/select.component';
+import { SearchComponent } from './ui/search/search.component';
+import { MainBanerComponent } from './main-baner/main-baner.component';
+import { SliderComponent } from './ui/slider/slider.component';
+import { SliderAnimationType } from './ui/slider/slider.enum';
+import { SlideComponent } from './ui/slide/slide.component';
+import { MainComponent } from './pages/main/main.component';
+import { MainDecisionsComponent } from './main-decisions/main-decisions.component';
+import { MainContentComponent } from './main-content/main-content.component';
+import { MainPresentComponent } from './main-present/main-present.component';
+import { ProductComponent } from './product/product.component';
+import { MainProductsComponent } from './main-products/main-products.component';
+import { MainChaptersComponent } from './main-chapters/main-chapters.component';
+import { ButtonComponent } from './ui/button/button.component';
+import { ButtonDetailComponent } from './ui/button-detail/button-detail.component';
+import { MainIntegrationsComponent } from './main-integrations/main-integrations.component';
+import { MainPartnersComponent } from './main-partners/main-partners.component';
+import { MainCompanyComponent } from './main-company/main-company.component';
+import { MainNewsComponent } from './main-news/main-news.component';
+import { FooterComponent } from './footer/footer.component';
+import { CollapseComponent } from './ui/collapse/collapse.component';
+import { MainPacketComponent } from './main-packet/main-packet.component';
+import { MainPacketBlockComponent } from './main-packet-block/main-packet-block.component';
+import { ProductsComponent } from './pages/products/products.component';
+import { CompanyComponent } from './pages/company/company.component';
+import { BookingModuleComponent } from './pages/booking-module/booking-module.component';
+import { ServicesComponent } from './pages/services/services.component';
+import { DevicesComponent } from './pages/devices/devices.component';
+import { ProgrammsComponent } from './pages/programms/programms.component';
+import { DevelopmentsComponent } from './pages/developments/developments.component';
+import { IntegrationsComponent } from './pages/integrations/integrations.component';
+import { ContactsComponent } from './pages/contacts/contacts.component';
+import { LeftMenuComponent } from './left-menu/left-menu.component';
+import { ServicesIntegrationHotelComponent } from './pages/services-integration-hotel/services-integration-hotel.component';
+import { ProductDecisionComponent } from './product-decision/product-decision.component';
+import { ProductMinimizeComponent } from './product-minimize/product-minimize.component';
+import { PanelComponent } from './ui/panel/panel.component';
+import { PanelPageComponent } from './ui/panel-page/panel-page.component';
+import { ServicesIntegrationBitrix24Component } from './pages/services-integration-bitrix24/services-integration-bitrix24.component';
+import { ServicesIntegrationComponent } from './pages/services-integration/services-integration.component';
+import { ServicesIntegrationTraktirComponent } from './pages/services-integration-traktir/services-integration-traktir.component';
+import { ServicesIntegrationBpComponent } from './pages/services-integration-bp/services-integration-bp.component';
+import { ServicesIntegrationUtComponent } from './pages/services-integration-ut/services-integration-ut.component';
+import { ServicesIntegrationRoznicaComponent } from './pages/services-integration-roznica/services-integration-roznica.component';
+import { ServicesIntegrationBookingModuleComponent } from './pages/services-integration-booking-module/services-integration-booking-module.component';
+import { DevelopmentsBookingModuleComponent } from './pages/developments-booking-module/developments-booking-module.component';
+import { DevelopmentsUkdComponent } from './pages/developments-ukd/developments-ukd.component';
+import { ServicesEscortHotelComponent } from './pages/services-escort-hotel/services-escort-hotel.component';
+import { ServicesEscortBpComponent } from './pages/services-escort-bp/services-escort-bp.component';
+import { ServicesEscortUtComponent } from './pages/services-escort-ut/services-escort-ut.component';
+import { ServicesEscortComponent } from './pages/services-escort/services-escort.component';
+import { ServicesProgrammingComponent } from './pages/services-programming/services-programming.component';
+import { ServicesProgrammingPrintedFormsComponent } from './pages/services-programming-printed-forms/services-programming-printed-forms.component';
+import { ServicesProgrammingReportsComponent } from './pages/services-programming-reports/services-programming-reports.component';
+import { ServicesProgrammingExtensionsComponent } from './pages/services-programming-extensions/services-programming-extensions.component';
+import { ServicesProgrammingProcessingComponent } from './pages/services-programming-processing/services-programming-processing.component';
+import { TrainingComponent } from './pages/training/training.component';
+import { TrainingIndividualComponent } from './pages/training-individual/training-individual.component';
+import { TrainingClassComponent } from './pages/training-class/training-class.component';
+import { TrainingOnlineComponent } from './pages/training-online/training-online.component';
+
+import { PageContentComponent } from './pages/page-content/page-content.component';
+import { ServicesFreshComponent } from './pages/services-fresh/services-fresh.component';
+import { ServicesGrmComponent } from './pages/services-grm/services-grm.component';
+import { DevicesCashRegistersComponent } from './pages/devices-cash-registers/devices-cash-registers.component';
+import { BlockProgrammingComponent } from './blocks/block-programming/block-programming.component';
+
+import { ElementYellowComponent } from './elements/element-yellow/element-yellow.component';
+import { ElementMinimizeComponent } from './elements/element-minimize/element-minimize.component';
+import { ElementDicisionComponent } from './elements/element-dicision/element-dicision.component';
+import { ElementBreadcrumbsComponent } from './elements/element-breadcrumbs/element-breadcrumbs.component';
+import { ElementPresentComponent } from './elements/element-present/element-present.component';
+import { TestComponent } from './test/test.component';
+import { ElementChapterComponent } from './elements/element-chapter/element-chapter.component';
+import { ElementTagsComponent } from './elements/element-tags/element-tags.component';
+import { DevicesHotelComponent } from './pages/devices-hotel/devices-hotel.component';
+import { ElementProductBanerComponent } from './elements/element-product-baner/element-product-baner.component';
+import { ElementProductTextComponent } from './elements/element-product-text/element-product-text.component';
+import { ElementProductRowComponent } from './elements/element-product-row/element-product-row.component';
+import { ElementProductListComponent } from './elements/element-product-list/element-product-list.component';
+import { ElementPackagesComponent } from './elements/element-packages/element-packages.component';
+import { ButtonMobileComponent } from './ui/button-mobile/button-mobile.component';
+import { ElementProductItemComponent } from './elements/element-product-item/element-product-item.component';
+import { ButtonSliderComponent } from './ui/button-slider/button-slider.component';
+import { PriceComponent } from './ui/price/price.component';
+import { CheckboxComponent } from './ui/checkbox/checkbox.component';
+import { SpinnerComponent } from './ui/spinner/spinner.component';
+
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    IconComponent,
+    MenuComponent,
+    ArrowComponent,
+    SelectComponent,
+    SearchComponent,
+    MainBanerComponent,
+    SliderComponent,
+    SlideComponent,
+    MainComponent,
+    MainDecisionsComponent,
+    MainContentComponent,
+    MainPresentComponent,
+    ProductComponent,
+    MainProductsComponent,
+    MainChaptersComponent,
+    ButtonComponent,
+    ButtonDetailComponent,
+    MainIntegrationsComponent,
+    MainPartnersComponent,
+    MainCompanyComponent,
+    MainNewsComponent,
+    FooterComponent,
+    CollapseComponent,
+    MainPacketComponent,
+    MainPacketBlockComponent,
+    ProductsComponent,
+    CompanyComponent,
+    BookingModuleComponent,
+    ServicesComponent,
+    DevicesComponent,
+    ProgrammsComponent,
+    DevelopmentsComponent,
+    IntegrationsComponent,
+    ContactsComponent,
+    LeftMenuComponent,
+    ServicesIntegrationHotelComponent,
+    ProductDecisionComponent,
+    ProductMinimizeComponent,
+    PanelComponent,
+    PanelPageComponent,
+    ServicesIntegrationBitrix24Component,
+    ServicesIntegrationComponent,
+    ServicesIntegrationTraktirComponent,
+    ServicesIntegrationBpComponent,
+    ServicesIntegrationUtComponent,
+    ServicesIntegrationRoznicaComponent,
+    ServicesIntegrationBookingModuleComponent,
+    DevelopmentsBookingModuleComponent,
+    DevelopmentsUkdComponent,
+    ServicesEscortHotelComponent,
+    ServicesEscortBpComponent,
+    ServicesEscortUtComponent,
+    ServicesEscortComponent,
+    ServicesProgrammingComponent,
+    ServicesProgrammingPrintedFormsComponent,
+    ServicesProgrammingReportsComponent,
+    ServicesProgrammingExtensionsComponent,
+    ServicesProgrammingProcessingComponent,
+    TrainingComponent,
+    TrainingIndividualComponent,
+    TrainingClassComponent,
+    TrainingOnlineComponent,
+    PageContentComponent,
+    ServicesFreshComponent,
+    ServicesGrmComponent,
+    DevicesCashRegistersComponent,
+    BlockProgrammingComponent,
+    ElementYellowComponent,
+    ElementMinimizeComponent,
+    ElementDicisionComponent,
+    ElementBreadcrumbsComponent,
+    ElementPresentComponent,
+    TestComponent,
+    ElementChapterComponent,
+    ElementTagsComponent,
+    DevicesHotelComponent,
+    ElementProductBanerComponent,
+    ElementProductTextComponent,
+    ElementProductRowComponent,
+    ElementProductListComponent,
+    ElementPackagesComponent,
+    ButtonMobileComponent,
+    ElementProductItemComponent,
+    ButtonSliderComponent,
+    PriceComponent,
+    CheckboxComponent,
+    SpinnerComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    FormsModule
+  ],
+  providers: [ provideClientHydration() ],
+  bootstrap: [
+    AppComponent]
+})
+export class AppModule {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: object,
+    @Inject(APP_ID) private appId: string) {
+    const platform = isPlatformBrowser(platformId) ?
+      'in the browser' : 'on the server';
+    console.log(`Running ${platform} with appId=${appId}`);
+  }
+ }

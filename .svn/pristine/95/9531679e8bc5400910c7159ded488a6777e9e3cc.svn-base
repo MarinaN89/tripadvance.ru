@@ -1,0 +1,22 @@
+<div class="wrapper">
+    <div class="image">
+        <img src={{this.src}}/> 
+    </div>
+    
+    <div class="right">
+        <div class="right-top">
+            <h1 class="name">{{this.name}}</h1>
+        </div>
+        <div class="right-bottom">
+            <div class="code">
+                <p>{{this.code}}</p>
+                <p class="code__text">КОД</p>
+            </div>
+            <div class="price">
+                <h1 class="price-text">{{this.price}}</h1>
+                <h1 class="price-icon">₽</h1>
+            </div>
+            <p class="button link">ПОДРОБНЕЕ</p>
+        </div>
+    </div>   
+</div>

@@ -1,0 +1,31 @@
+<div class="wrapper">
+    <img src="/assets/products/product-fon.jpg" class="image-backgrond" alt="lorem">
+    <div class="chapter">
+        
+
+        <div class="content">
+            <div class="content-lists">
+                <div class="list-row">
+                    <p class="list-text" *ngFor="let title of this.item.title">{{title}}</p>
+                </div>
+            </div>
+    
+    
+            <div class="content-description">
+                <p *ngFor="let description of this.item.description" class="content-description__text">{{description}}</p>
+                <a *ngFor="let link of this.item.links; first as isFirst" [attr.href]="link.href" class="content-description__link" style="margin: 0px -2px 0 0px;">
+                    <span class="slash" *ngIf="!isFirst" style="margin-right: 4px">,</span>
+                    {{link.text}}
+                </a>
+            </div>
+    
+            <div class="content-buttons">
+                <app-button  [href]="item.link.href">ПОДРОБНЕЕ</app-button>
+                <a class="content-buttons__link pointer" [attr.href]="item.link.href" >{{item.link.text}}</a>
+            </div>
+        </div>
+        <div class="image">
+            <img [attr.src]="item.image"/>
+        </div>
+    </div> 
+</div>

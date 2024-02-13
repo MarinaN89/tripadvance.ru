@@ -1,0 +1,104 @@
+<!--
+
+
+<app-services-integration
+    title = "Модуль бронирования - Внедрение"
+    description = "Проведем аудит и предложим правильное программное обеспечивание, как в базовой конфигурации, так и в индивидуальной. Внедрим и настроим программы на любом
+    этапе, обучим персонал и закроем белые пятна в работе. Настроим сложные интеграции и создадим структуру по обмену данных. Разработаем новые печатные формы и
+    отчеты. Синхронизируем кассы онлайн, интернет эквайринг. Осуществляем базовую и расширенную техническую поддержку"
+>
+    <app-panel>
+        <app-panel-page
+            title='Внедрение Модуль бронирования
+                   Пакет "Базовый"'
+        >
+
+        <div >
+            <p style="padding: 24px;">Наша команда специалистов готова помочь вам настроить систему под ваши потребности и обеспечить ее поддержку на
+                всех этапах использования. Мы гарантируем быстрое внедрение и обучение вашей команды работе с 1С Отель.
+                Не упустите возможность улучшить работу вашей гостиницы и повысить уровень сервиса для ваших гостей!</p>
+
+        </div>
+
+        </app-panel-page>
+        <app-panel-page
+            title='Внедрение Модуль бронирования
+            Пакет "Расширенный"'
+        >
+
+        <div>
+            
+
+        </div>
+        </app-panel-page>
+
+        <app-panel-page
+            title='Внедрение 1С:УправлениеТорговлей
+            Пакет "Полный"'
+        >
+
+
+        <div>
+            
+
+        </div>
+
+        </app-panel-page>
+        
+    </app-panel>
+</app-services-integration>
+-->
+
+<app-page-content>
+
+    <app-element-product-baner
+        [item]="this.page.baner">
+    </app-element-product-baner>
+
+    <app-element-product-text
+        [item]="this.page.text1">
+    </app-element-product-text>
+
+    <app-element-product-text
+        [item]="this.page.text2">
+    </app-element-product-text>
+
+    <app-element-product-text
+        [item]="this.page.text3">
+    </app-element-product-text>
+    
+    <app-element-tags [item]='[
+        { text:"1С + касса \"Атол\""},
+        { text:"Разработка печатных форм"},
+        { text:"Обучение 1С:Отель с нуля"},
+        { text:"Интеграция с 1С:Отель"},
+        { text:"Эл. замки в 1С"},
+        { text:"1С:Отель + Битрикс24"},   
+    ]'>
+
+    </app-element-tags>
+
+    <app-element-packages [item]="this.page.packages">
+    </app-element-packages>
+
+    <app-element-product-text
+        [item]="this.page.text4">
+    </app-element-product-text>
+
+    <div style="margin-top: 48px;">
+        <app-block-programming></app-block-programming>
+    </div>
+
+    <app-element-product-text
+        [item]="this.page.text5">
+    </app-element-product-text>
+
+    <div style="margin-top: 48px;">
+        <app-main-integrations></app-main-integrations>
+    </div>
+    <div style="margin-top: 48px;">
+        <app-main-chapters></app-main-chapters>
+    </div>
+    
+</app-page-content>
+

@@ -1,0 +1,27 @@
+
+<div class="wrapper">
+    <div class="header">
+        <h1 class="header-title__text desktop">Разработки / Интеграции / Оборудование</h1>
+        <h1 class="header-title__text mobile">Разработки Интеграции Оборудование</h1>
+        
+        <div class="buttons-wrapper desktop">
+            <app-button-slider (onClick)="($event == 1) ? this.next() : this.prev()"></app-button-slider>
+            <!--
+            <div class="buttons">
+                <p class="button-left pointer" (click)="this.next()"><</p>
+                <p class="button-right pointer" (click)="this.prev()">></p>
+            </div>
+            -->
+        </div>
+    </div>
+    <div class="line"></div>
+    <app-slider [buttonsMobile]="true" [type]="this.animationType" [duration]="this.animationDuration" [countView]="1"> 
+        <app-slide class="slide" *ngFor="let item of this.site.elements.chapters">
+            <app-element-chapter [item]="item" style="width: 100%;">
+
+            </app-element-chapter>
+        </app-slide>   
+    </app-slider>
+</div>
+
+

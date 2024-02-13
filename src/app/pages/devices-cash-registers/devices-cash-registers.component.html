@@ -1,0 +1,44 @@
+
+
+<app-page-content
+    title = "Облачные кассы"
+    
+    >
+
+    <app-element-product-baner
+        [item]="this.page.baner">
+    </app-element-product-baner>
+
+    <app-element-product-text
+        [item]="this.page.text1">
+    </app-element-product-text>  
+
+    <app-element-product-text
+        [item]="this.page.text2">
+    </app-element-product-text>
+
+    <app-element-product-text
+        [item]="this.page.text3">
+    </app-element-product-text>
+<!--Вывести теги-->
+    <app-element-tags [item]='this.page.tags'></app-element-tags>
+
+ 
+    <app-element-product-item *ngIf="this.device != undefined" [item]="this.device"></app-element-product-item>
+
+    <app-element-product-list *ngIf="this.device == undefined" [item]="this.products">
+
+    </app-element-product-list>
+<!--
+    <div *ngIf="this.allProducts" class="products">
+        <div *ngFor="let item of this.site.cashRegisters" class="products__item">
+            <app-product 
+                [name]="item.name"
+                [code]="''"
+                [price]="65000"
+                [src]="'assets/products/atol55f.png'">
+            </app-product>
+        </div>
+    </div>
+-->
+</app-page-content>

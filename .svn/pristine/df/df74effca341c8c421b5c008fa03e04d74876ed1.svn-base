@@ -1,0 +1,24 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="title">
+            <h1 class="title__text">Программирование на базе 1С:Предприятие</h1>
+            <p class="title__button link">перейти в раздел разработки</p>
+        </div>
+    
+        <div class="buttons">
+            <p class="button-left pointer" (click)="this.prev()"><</p>
+            <p class="button-right pointer" (click)="this.next()">></p>
+        </div>
+    </div>
+
+
+    <div class="line"></div>
+
+    <app-slider [type]="this.animationType" [duration]="this.animationDuration" [countView]="this.getCountViewSlides()">
+        
+        <app-slide *ngFor="let item of this.site.elements.yellow">
+            <app-element-yellow [item]="item"></app-element-yellow>
+        </app-slide>
+    </app-slider>
+
+</div>

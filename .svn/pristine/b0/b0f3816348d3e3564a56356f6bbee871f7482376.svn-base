@@ -1,0 +1,7 @@
+<div class="wrapper">
+    <div class="item" *ngFor="let row of this.item; first as isFirst; let last = last;">
+        <span class="slash" *ngIf="!isFirst">—</span>
+        <a *ngIf="!last" class="text" [attr.href]="row.href">{{row.title}}</a>
+        <a *ngIf="last" class="text-last" [attr.href]="row.href">{{row.title}}</a>
+    </div>
+</div>

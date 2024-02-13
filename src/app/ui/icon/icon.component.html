@@ -1,0 +1,10 @@
+<svg 
+    (click)="onClick()" 
+    (mouseenter) = "onHoverEnter()" 
+    (mouseleave)="onHoverLeave()"
+    class="icon" 
+    [style.fill]="color" 
+    [style.background]="background" 
+    [style.font-size.px]="size">
+    <use [attr.xlink:href]="href" x="0" y="0"></use>
+</svg>

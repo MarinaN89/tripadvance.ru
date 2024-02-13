@@ -1,0 +1,16 @@
+
+<div  #slider class="slider" (touchstart)="this.swipe($event, 'start')" (touchend)="this.swipe($event, 'end')">
+    <!--
+
+    
+    <div *ngIf="this.buttonsMobile" class="buttons-mobile mobile">
+        <p class="button-mobile-left pointer" (click)="this.next()"><</p>
+        <p class="button-mobile-right pointer" (click)="this.prev()">></p>
+    </div>
+    -->
+    
+    <div class="wrapper">
+        <ng-content></ng-content>
+    </div>  
+</div>
+

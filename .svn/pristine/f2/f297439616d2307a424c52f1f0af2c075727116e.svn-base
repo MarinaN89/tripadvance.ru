@@ -1,0 +1,11 @@
+<!--
+
+
+<script id="tripadvance-module" src='https://online.tripadvance.ru/integrations/module.js?id=2fcd0e10-bada-11e9-80c7-000000538429&showRooms=true&sectionId=block-booking&viewType=roomType&iframe=inline&style=blue-grey'></script>
+-->
+
+<div class="page">
+
+    <div id="block-booking"></div>
+    
+</div>

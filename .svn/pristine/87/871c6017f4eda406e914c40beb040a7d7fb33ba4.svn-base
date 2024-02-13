@@ -1,0 +1,56 @@
+
+.block-baner__footer{
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    display: flex;
+    margin-top: -4px;
+}
+
+.block-baner__footer-left{
+    border-right: 1px solid lightgrey;
+    padding: 12px 24px;
+    display: flex;
+}
+
+.block-baner__footer-right{
+    padding: 12px 24px;
+    display: flex;
+}
+
+.block-baner__footer-group{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-top: 6px;
+}
+
+.block-baner__footer__title{
+    font-size: 18px;
+    font-weight: bold;
+
+}
+
+.block-baner__footer__description{
+    margin-top: 12px;
+
+}
+
+
+.new-block__button{
+    margin-top: 12px;
+    display: flex;
+}
+
+.new-block__button-text{
+    color: #ED3E3E;
+    font-weight: 700;
+}
+
+.new-block__button-arrow{
+    margin-left: 6px;
+}
+
+

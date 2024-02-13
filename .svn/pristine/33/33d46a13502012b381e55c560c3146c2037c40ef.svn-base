@@ -1,0 +1,20 @@
+<div class="slide">
+    <img width="35" height="35" src="assets/services/Group.png" class="slide-left"/>
+
+    <div class="slide-right">
+        <div class="slide-top">
+            <p class="slide-title">{{this.item.title}}</p>
+            <p class="slide-title">{{this.item.type}}</p>
+            <p class="slide-description">{{this.item.description}}</p>    
+        </div>
+        <div class="new-block__button">
+            <app-button-detail>Подробнее</app-button-detail>
+            <!--
+            <a [href]="this.item.href" class="new-block__button-text" >Подробнее</a>
+            <app-icon class="new-block__button-arrow" name="arrow-right" color="red" size="6px"></app-icon>
+            -->
+
+        </div>
+    </div>
+
+</div>

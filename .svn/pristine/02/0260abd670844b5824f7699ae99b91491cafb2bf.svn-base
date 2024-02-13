@@ -1,0 +1,72 @@
+<div class="wrapper">
+
+    <div class="header desktop">
+        <div *ngFor="let page of this.elPages" (click)="this.checkPage(page)"
+            class="page-caption" 
+            [class.border-top]="page == this.activePage"
+            [class.border-bottom]="page != this.activePage"
+            [style.background]="page == this.activePage ? 'white': 'lavenderblush'">
+
+            <div style="display: flex; flex-direction: column;">
+                <p>{{page.title}}</p>
+                <p>{{page.type}}</p>
+            </div>
+
+
+            <img [attr.src]="page.image" style="margin-left:16px;"/>
+
+            <div *ngIf="this.isSeparator(page)"
+                class="page-separator">
+
+            </div>
+        </div>
+    </div>
+
+    <!--
+    <div class="header mobile">
+        <div
+            class="page-caption" 
+            [class.border-top]="true"
+            [class.border-bottom]="false"
+            [style.background]="'white'">
+
+            <div style="display: flex; flex-direction: column;">
+                <p>{{this.activePage.title}}</p>
+                <p>{{this.activePage.type}}</p>
+            </div>
+
+            <img [attr.src]="this.activePage.image" style="margin-left:16px;"/>
+
+        </div>
+    </div>
+    -->
+    <div class="content">
+        <ng-content></ng-content>
+    </div>
+
+    <!--
+    <div class="header mobile">
+        <div *ngFor="let page of this.elPages" (click)="this.checkPage(page)"
+            class="page-caption" 
+            [class.border-top]="page == this.activePage"
+            [class.border-bottom]="page != this.activePage"
+            [style.background]="page == this.activePage ? 'white': 'lavenderblush'">
+
+            <div *ngIf="page != this.activePage">
+                <div style="display: flex; flex-direction: column;">
+                    <p>{{page.title}}</p>
+                    <p>{{page.type}}</p>
+                </div>
+    
+    
+                <img [attr.src]="page.image" style="margin-left:16px;"/>
+            </div>
+
+        </div>
+    </div>
+    -->
+</div> 
+
+
+
+

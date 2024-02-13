@@ -1,0 +1,28 @@
+
+<div class="block-text">
+    <div *ngIf="this.item.title != undefined" class="block-text__group">     
+        <p class="block-text__title">{{this.item.title}}</p>
+        <div *ngIf="this.item.subtitle == undefined" class="line"></div>
+    </div>
+
+    <div *ngIf="this.item.subtitle != undefined" class="block-text__subgroup">    
+        <p class="block-text__subtitle">{{this.item.subtitle}}</p>
+    </div>
+
+    <div *ngFor="let description of this.item.description"  class="block-text__description">
+        <div [style.margin]="description.margin">
+
+        </div>
+        <br *ngIf="description.isRow!=true">
+        <img *ngIf="description.image!=undefined" width="16" height="16" [attr.src]="description.image" style="margin-right:12px"/>
+        
+        <span *ngIf="description.text != undefined">
+            <p *ngIf="description.href==undefined" [class.bold]="description.bold==true">{{description.text}}</p>
+            <a *ngIf="description.href!=undefined" class="link" [class.bold]="description.bold==true" style="margin-left:4px" [attr.href]="description.href">{{description.text}}</a>    
+        </span>       
+        <div *ngIf="description.html != undefined" [innerHTML]="description.html">
+        </div>    
+    </div>
+
+</div>
+

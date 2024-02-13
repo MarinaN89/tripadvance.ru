@@ -1,0 +1,75 @@
+<div class="wrapper">
+    
+    <app-element-breadcrumbs [item]="this.page.breadcrumbs"></app-element-breadcrumbs>
+    
+    <div class="caption">
+        <p class="caption__text">{{this.page.title}}</p>
+    </div>
+    <div class="description">
+        <p class="description__text">{{this.page.description}}</p>
+    </div>
+
+ <!--Описание мобильная версия-->   
+    <div class="description__text-mobile">
+        <p class="description__text-mobile-visible">{{this.page.descriptionMobaileVisible}}</p>
+        <p  *ngIf="this.page.descriptionMobileHidden != undefined" class="description__text-mobile-hidden">
+            {{this.page.descriptionMobileHidden}}
+        </p>
+       
+    <div  *ngIf="this.page.descriptionMobileHidden != undefined">
+        <app-collapse  [expanded]="this.buttonDescriptionMobile">
+            <p>{{this.page.descriptionMobileHidden}}</p>
+        </app-collapse>
+    
+        <app-button-turn  (onClick)="this.buttonDescriptionMobile = !this.buttonDescriptionMobile">
+            <p class="button-turn" *ngIf="!this.buttonDescriptionMobile">Показать еще</p>
+            <p class="button-turn" *ngIf="this.buttonDescriptionMobile">Свернуть</p>
+        </app-button-turn>
+    </div>
+
+  </div> 
+
+    <div class="content">
+        <div class="left">
+            <app-left-menu ngSkipHydration></app-left-menu>
+           
+            <div class="left-separator"></div>
+            
+            <app-element-minimize [item]="this.site.elements.minimize[6]"></app-element-minimize>
+
+            <div class="left-separator"></div>
+
+            <app-element-minimize [item]="this.site.elements.minimize[7]"></app-element-minimize>
+
+
+            <div *ngFor="let item of this.site.elements.dicisions">
+                <div class="left-separator"></div>
+                <app-element-dicision [item]="item"></app-element-dicision>
+            </div>
+            
+        </div>
+
+        <div class="right">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>
+
+<!--<script>
+ function readMore(){
+  var dotes = document.getElementById('dotes');
+  var hiddenText = document.getElementById('hidden-text');
+  var mobileButtonDiscription = document.getElementById('mobile-button-discription');
+  
+
+  if(dotes.style.display === 'none'){
+      dotes.style.display = 'inline';
+      mobileButtonDiscription.HTMLButtonElement.onclick = "Показать еще";
+      hiddenText.style.display = 'none';
+  } else{
+      dotes.style.display = 'none';
+      mobileButtonDiscription.innerHTML = "Скрыть";
+      hiddenText.style.display = 'inline';
+  } 
+}
+</script>-->

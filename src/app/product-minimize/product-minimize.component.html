@@ -1,0 +1,9 @@
+<div>
+    <p *ngIf="this.isNew == 'true'" class="new-block__text1">Новое</p>
+    <h4 class="new-block__title">{{this.title}}</h4>
+    <p>{{this.description}}</p>
+    <div class="new-block__button">
+        <a [attr.href]="this.href" class="new-block__button-text" >Подробнее</a>
+        <app-icon class="new-block__button-arrow" name="arrow-right" color="red" size="6px"></app-icon>
+    </div>
+</div>

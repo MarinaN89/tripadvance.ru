@@ -1,0 +1,239 @@
+
+
+<div class="wrapper">
+   
+    <div class="line desktop">
+
+    </div>
+
+
+    <div class="menu desktop">
+        
+        <div class="wrapper-slider">
+            <div class="wrapper-line">
+                <div #active class="menu_button__active"></div>
+            </div>
+    
+            <app-slider [sizeType]="'all'" [duration]="this.animationDuration" [countView]="5" style="width:100%; margin-right: 40px" (onAnimate)="this.menuAnimate()" (onChange)="this.menuChangeAnimate($event)">
+                <app-slide>
+                    <div #hotel class="menu_button_wrapper" (click)="this.setMenuActive(this.menuHotel)" (mouseenter)="this.setMenuMouseEnter('hotel')">
+                        <h2 class="menu_button menu_adaptive__main">1С:ОТЕЛЬ</h2>
+                    </div>
+                </app-slide>
+                <app-slide>
+                    <div #bitrix class="menu_button_wrapper"  (click)="this.setMenuActive(this.menuBitrix)" (mouseenter)="this.setMenuMouseEnter('bitrix')">
+                        <h2 class="menu_button menu_adaptive__service">БИТРИКС 24</h2>
+                    </div>
+                </app-slide>
+                <app-slide>
+                    <div #module class="menu_button_wrapper"  (click)="this.setMenuActive(this.menuModule)" (mouseenter)="this.setMenuMouseEnter('module')">
+                        <h2 class="menu_button menu_adaptive__device">МОДУЛЬ БРОНИРОВАНИЯ</h2>
+                    </div>
+                </app-slide>
+                <app-slide>
+                    <div #kassa class="menu_button_wrapper"  (click)="this.setMenuActive(this.menuKassa)" (mouseenter)="this.setMenuMouseEnter('kassa')">
+                        <h2 class="menu_button menu_adaptive__programs">КАССЫ</h2>
+                    </div>
+                </app-slide>
+                <app-slide>
+                    <div #integration class="menu_button_wrapper"  (click)="this.setMenuActive(this.menuIntegration)" (mouseenter)="this.setMenuMouseEnter('integration')">
+                        <h2 class="menu_button menu_adaptive__development">ИНТЕГРАЦИИ</h2>
+                    </div>
+                </app-slide>   
+                <app-slide>
+                    <div #integration2 class="menu_button_wrapper"  (click)="this.setMenuActive(this.menuIntegration2)" (mouseenter)="this.setMenuMouseEnter('integration2')">
+                        <h2 class="menu_button menu_adaptive__development">ИНТЕГРАЦИИ2</h2>
+                    </div>
+                </app-slide>  
+                <app-slide>
+                    <div #integration3 class="menu_button_wrapper"  (click)="this.setMenuActive(this.menuIntegration3)" (mouseenter)="this.setMenuMouseEnter('integration3')">
+                        <h2 class="menu_button menu_adaptive__development">ИНТЕГРАЦИИ3</h2>
+                    </div>
+                </app-slide>  
+            </app-slider>
+    
+        </div>
+
+        <div class="buttons">
+            <app-button-slider [small]="true" (onClick)="($event == 1) ? this.menuNext() : this.menuPrev()"></app-button-slider>
+            <!---->
+            <p class="button-left pointer" (click)="this.menuPrev()"><</p>
+            <p class="button-right pointer" (click)="this.menuNext()">></p>
+            
+        </div>
+        
+    </div>
+
+    
+    <div  class="menu mobile">
+        <app-slider style="width: 100%" [type]="this.animationType" [duration]="300" [countView]="3" [location]="'center'" (onChange)="onChangeMenuMobile($event)">
+            <app-slide>
+                <div #hotel class="menu_button" [class.active]="this.menu[0].active" [class.noactive]="!this.menu[0].active" >
+                    <img class="product-top__background mobile" src="/assets/main/product-fon.jpg"/>
+                    <h2 class="menu_button__text1">Внедрение 1С:Отель</h2>
+                    <h4 class="menu_button__text2">Пакетные решения</h4>
+                    <div class="menu_button__icon" [style.background]="'yellow'">
+                        <app-icon style="height: 15px;" name="Tripadvanse-logo" size ="15" color="white"></app-icon>
+                    </div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div #bitrix class="menu_button" [class.active]="this.menu[1].active"  [class.noactive]="!this.menu[1].active">
+                    <img class="product-top__background mobile" src="/assets/main/product-fon.jpg"/>
+                    <h2 class="menu_button__text1">Битрикс 24</h2>
+                    <h4 class="menu_button__text2">Пакетные решения</h4>
+                    <div class="menu_button__icon">
+                        <app-icon style="height: 15px;" name="Tripadvanse-logo" size ="15" color="white"></app-icon>
+                    </div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div #module class="menu_button" [class.active]="this.menu[2].active"  [class.noactive]="!this.menu[2].active">
+                    <img class="product-top__background mobile" src="/assets/main/product-fon.jpg"/>
+                    <h2 class="menu_button__text1">Модуль бронирования</h2>
+                    <h4 class="menu_button__text2">Пакетные решения</h4>
+                    <div class="menu_button__icon">
+                        <app-icon style="height: 15px;" name="Tripadvanse-logo" size ="15" color="white"></app-icon>
+                    </div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div #kassa class="menu_button" [class.active]="this.menu[3].active"  [class.noactive]="!this.menu[3].active">
+                    <img class="product-top__background mobile" src="/assets/main/product-fon.jpg"/>
+                    <h2 class="menu_button__text1">Кассы</h2>
+                    <h4 class="menu_button__text2">Пакетные решения</h4>
+                    <div class="menu_button__icon">
+                        <app-icon style="height: 15px;" name="Tripadvanse-logo" size ="15" color="white"></app-icon>
+                    </div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div #integration class="menu_button" [class.active]="this.menu[4].active"  [class.noactive]="!this.menu[4].active">
+                    <img class="product-top__background mobile" src="/assets/main/product-fon.jpg"/>
+                    <h2 class="menu_button__text1">Интеграции</h2>
+                    <h4 class="menu_button__text2">Пакетные решения</h4>
+                    <div class="menu_button__icon">
+                        <app-icon style="height: 15px;" name="Tripadvanse-logo" size ="15" color="white"></app-icon>
+                    </div>
+                </div>
+            </app-slide>
+        </app-slider>
+    </div>
+
+
+
+
+    <div class="content">
+        
+        <p class="content-description">
+            {{this.currentMenu.description}}
+        </p>
+        
+        <p class="content-link">
+            Перейти в раздел
+        </p>
+
+        <app-element-tags [item]='[
+            { text:"1С + касса \"Атол\""},
+            { text:"Разработка печатных форм"},
+            { text:"Обучение 1С:Отель с нуля"},
+            { text:"Интеграция с 1С:Отель"},
+            { text:"Эл. замки в 1С"},
+            { text:"1С:Отель + Битрикс24"},   
+        ]'>
+        
+        </app-element-tags>
+
+        <div class="mobile-numbers-packets mobile">
+            <ng-container *ngFor="let item of this.currentPacket; let i = index">
+                <div class="mobile-numbers-packets__item" [style.background]="(this.currentPackageIndex==i)? 'lightgreen' : 'lightgray'"> 
+                
+                </div>
+            </ng-container>
+        </div>
+
+
+        <div class="packets">
+
+            <app-slider [type]="this.animationType" [duration]="this.animationDuration" [countView]="this.getCountViewSliderPacket()" (onChange)="onChangePackage($event)">
+                <app-slide *ngFor="let packet of this.currentPacket">
+                    <div class="packet">
+                        <div class="packet-top">
+                            <h1>{{packet.title}}</h1>
+                            <h1>{{packet.type}}</h1>
+                            <p class="packet-description">{{packet.description}}</p> 
+                            
+                            <div class="packet-blocks">
+                                <div class="packet-block-item pointer" *ngFor="let block of packet.blocks">
+                                    <div class="packet-block"  (click)="this.changeBlock(packet.blocks, block)">
+                                        <div *ngIf="block.enabled" class="packet-block__active"></div>
+                                        <div *ngIf="!block.enabled" class="packet-block__noactive"></div>
+                                        <p class="packet-block__text" [class.packet-block__text-noactive]="!block.enabled">{{block.name}}</p>
+                                        <p class="points"  [class.packet-block__text-noactive]="!block.enabled"></p>
+                                        <app-arrow  [setOpen]="block.open"  [class.packet-block__text-noactive]="!block.enabled"></app-arrow>
+                                    </div>
+                                    <app-collapse [expanded]="block.open" >
+                                        <p  [class.packet-block__text-noactive]="!block.enabled">{{block.description}}</p>
+                                    </app-collapse>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="packet-footer">
+                            <h3>от {{packet.price}}</h3>
+                            <div class="packet__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                        </div>
+                    </div>
+                </app-slide>
+            </app-slider>
+        </div>
+
+<!---->
+
+
+        <div class="packets desktop">
+            <div class="packets-wrapper">
+                <div *ngFor="let packet of this.currentPacket">
+                    <div class="packet">
+                        <div class="packet-top">
+                            <h1>{{packet.title}}</h1>
+                            <h1>{{packet.type}}</h1>
+                            <p class="packet-description">{{packet.description}}</p> 
+                            
+                            <div class="packet-blocks">
+                                <div class="packet-block-item pointer" *ngFor="let block of packet.blocks">
+                                    <div class="packet-block"  (click)="this.changeBlock(packet.blocks, block)">
+                                        <div *ngIf="block.enabled" class="packet-block__active"></div>
+                                        <div *ngIf="!block.enabled" class="packet-block__noactive"></div>
+                                        <p class="packet-block__text" [class.packet-block__text-noactive]="!block.enabled">{{block.name}}</p>
+                                        <p  [class.points-noactive]="!block.enabled" [class.points]="block.enabled"></p>
+                                        <app-arrow  [setOpen]="block.open" [class.packet-block__text-noactive]="!block.enabled"></app-arrow>
+                                    </div>
+                                    <app-collapse [expanded]="block.open">
+                                        <p class="packet-block__description" [class.packet-block__text-noactive]="!block.enabled">{{block.description}}</p>
+                                    </app-collapse>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="packet-footer">
+                            <h3>от {{packet.price}}₽</h3>
+                            <div class="packet__button pointer">
+                                <app-button [href]="packet.href">Подробнее</app-button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+    </div>
+</div>
+
+

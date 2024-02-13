@@ -1,0 +1,51 @@
+
+.packet-block{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-top: 12px;
+    align-items: center;
+}
+
+.packet-block__noactive{
+    height: 10px;
+    min-height: 10px;
+    min-width: 10px;
+    margin-right: 8px;
+    background-color: lightgrey;
+    border-radius: 33px;
+}
+
+.packet-block__active{
+    height: 10px;
+    min-height: 10px;
+    min-width: 10px;
+    margin-right: 8px;
+    background-color: limegreen;
+    border-radius: 33px;
+}
+
+
+
+.packet-block__text{
+    text-align: start;
+    white-space: nowrap;
+    margin-right:4px;
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+.points{
+    width: 100%;
+  }
+  .points:after {
+    content: "\A0";
+    display: block;
+    overflow: hidden;
+    margin-top: -6px;
+    background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
+    background-position: bottom;
+    background-size: 3px 1px;
+    background-repeat: repeat-x;
+  }

@@ -1,0 +1,78 @@
+.wrapper{
+    position: relative;
+    width: 100%;
+    
+}
+
+.block{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    padding: 0px 3px;
+    
+}
+
+.block-content{
+    position:relative;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.block-description{
+    position:relative;
+    max-height: 120px;
+    padding-bottom: 24px;
+    background-image: url("/assets/present/FON v1.png");
+    background-size: 100% 100%;
+    padding-top: 12px;
+}
+
+.image-fon{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.image{
+    width:100%;
+}
+
+.image-backgrond{
+    position: absolute;
+    top:0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;;
+}
+
+.block-title{
+    color:white;
+    margin-left: 48px;
+    margin-top: 24px;
+    position: absolute;
+}
+
+.minimize-wrapper{
+    display: flex;
+    padding-top: 12px;
+}
+
+
+.new-block__button{
+    margin-top: 12px;
+    display: flex;
+    margin-left: 65px;
+}
+
+.new-block__button-text{
+    color: #ED3E3E;
+    font-weight: 700;
+}
+
+.new-block__button-arrow{
+    margin-left: 6px;
+}

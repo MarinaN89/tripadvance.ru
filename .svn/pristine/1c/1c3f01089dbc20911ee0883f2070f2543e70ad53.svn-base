@@ -1,0 +1,5 @@
+<div class="button pointer">
+    <a (click)="this.navigateTo(this.href)">
+        <ng-content></ng-content>
+    </a>
+</div>

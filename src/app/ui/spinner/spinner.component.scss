@@ -1,0 +1,23 @@
+button{
+    width: 24px;
+    height: 24px;
+    font-weight: 500;
+    background: white;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+input{
+    text-align: center;
+    outline: none;
+    width: 24px;
+    margin: 0 4px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}

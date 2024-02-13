@@ -1,0 +1,44 @@
+
+<div class="block-baner">
+    <img style="width:100%" [attr.src]="this.item.image"/>
+    <div class="block-baner__footer">
+        <div class="block-baner__footer-left">
+            <img width="50px" height="40px" [attr.src]="this.item.left.image"/>
+
+            <div class="block-baner__footer-group">
+                
+                <p class="block-baner__footer__title">
+                    {{this.item.left.title}}
+                </p>
+
+                <p class="block-baner__footer__description">  
+                    {{this.item.left.description}}
+                </p>
+
+                <div class="new-block__button">
+                    
+                    <app-button-detail>Подробнее</app-button-detail>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div class="block-baner__footer-right">
+            <img width="40px" height="30px"  [attr.src]="this.item.right.image"/>
+
+            <div class="block-baner__footer-group">
+                
+                <p class="block-baner__footer__title">
+                    {{this.item.right.title}}
+                </p>
+
+                <p class="block-baner__footer__description">  
+                    {{this.item.right.description}}
+                </p>
+                <div class="new-block__button">
+                    <app-button-detail>Подробнее</app-button-detail>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

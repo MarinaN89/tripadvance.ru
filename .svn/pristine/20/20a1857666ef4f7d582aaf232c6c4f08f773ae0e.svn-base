@@ -1,0 +1,41 @@
+<div class="wrapper">
+    <div class="left" (click)="this.checkDescription()">
+        <img class="image" [attr.src]="this.item.image"/>
+        <div class="name-block">
+            <span class="name">{{this.item.name}}</span>
+            <span class="code">{{this.item.id}} КОД</span>
+        </div>
+
+    </div>
+    <div class="right">
+        <app-price [value]="this.item.price" [size]="24"></app-price>
+        
+        <div class="right-separator"></div>
+        <app-button (onClick)="this.openProduct(this.item)" class="button">ПОДРОБНЕЕ</app-button>
+    </div>
+</div>
+
+<div class="wrapper-line">
+    <div class="line desktop"></div>
+    <app-arrow [setOpen]="this.open"></app-arrow>
+</div>
+
+<div class="wrapper-description">
+    <app-collapse [expanded]="this.open">
+        <p *ngFor="let description of this.item.description" class="description">
+            {{description}}
+        </p>
+        <app-button-detail (onClick)="this.openProduct(this.item)"></app-button-detail>
+
+        <div class="attentions">
+            <div class="attentions-item" *ngFor="let attention of this.item.attentions">
+                <app-element-product-text [item]="attention">
+
+                </app-element-product-text>
+            </div>
+        </div>
+    </app-collapse>
+</div>
+
+
+

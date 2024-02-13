@@ -1,0 +1,35 @@
+.wrapper{
+    height:100%;
+    position:relative;
+    width: 100%;
+    overflow: hidden;
+}
+.content{
+    height:100%;
+    overflow: hidden;
+    width: 100%;
+    transition: 0.15s ease-in-out;  
+}
+/*
+    position:absolute;
+    opacity: 0;
+*/
+
+.collapse {
+    border: 1px solid rgba(255,255,255,255);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .collapse div {
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  @media (max-width:680px){
+    .collapse div {
+        padding-left: 0;
+        padding-right: 0;
+      }
+  }

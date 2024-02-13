@@ -1,0 +1,21 @@
+<iframe id="vhplayeriframe-aed771ecf0bbd607f29fe733ddb66de7"
+			src="https://player02.getcourse.ru/sign-player/?json=eyJ2aWRlb19oYXNoIjoiYWVkNzcxZWNmMGJiZDYwN2YyOWZlNzMzZGRiNjZkZTciLCJ1c2VyX2lkIjozMDc3MTc1MDgsImxlc3Nvbl9pZCI6Mjg3MDE4OTYzLCJpcCI6IjM3LjE4LjQxLjE3MSIsInRpbWUiOjE2OTMzMzAwMzIsInBheWxvYWQiOiJ1XzMwNzcxNzUwOCIsInVpX2xhbmd1YWdlIjoicnUifQ==&s=8eb289dfda3bb578d20ec40d5633520a&vh-static-feature=zigzag"
+			class="vhi-iframe js--vhi-iframe"
+			allow="autoplay; encrypted-media; clipboard-read; clipboard-write;"
+			sandbox="allow-scripts allow-same-origin allow-popups allow-forms allow-downloads"
+			allowfullscreen
+			frameborder="0"
+			scrolling="no"
+            width="100%"
+            height="100%"
+            
+			></iframe>
+
+<!--
+<app-element-packages [item]="this.site.packages.hotel">
+
+</app-element-packages>
+
+<app-element-present height="100%" [item]="this.site.elements.presents[0]"></app-element-present>
+-->
+

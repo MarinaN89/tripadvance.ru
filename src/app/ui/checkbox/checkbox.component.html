@@ -1,0 +1,9 @@
+<div class="checkbox">
+    <label class="checkbox-box"  for="checkbox-label-{{getUniqueID()}}">
+        <span *ngIf="checkbox.checked" class="checkmark"></span>
+    </label>
+    <input [disabled]="(this.enabled == false) ? 'disabled' : ''" #checkbox type="checkbox" [(ngModel)]="value" (change)="onChange(checkbox.checked)" id="checkbox-label-{{getUniqueID()}}">
+    <label class="checkbox-label" for="checkbox-label-{{getUniqueID()}}">
+        <ng-content></ng-content>
+    </label>
+</div>

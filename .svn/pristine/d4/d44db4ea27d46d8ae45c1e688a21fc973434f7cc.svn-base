@@ -1,0 +1,5 @@
+<div class="wrapper">
+    <button (click)="this.add()">+</button>
+    <input type="number" [(ngModel)]="this.value"  [min]="this.min" [max]="this.max" />
+    <button (click)="this.remove()">-</button>
+</div>

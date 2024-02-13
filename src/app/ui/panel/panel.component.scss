@@ -1,0 +1,65 @@
+.wrapper{
+    width: 100%;
+}
+.header{
+    
+    background: lavenderblush;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-caption{
+    height: 48px;
+    padding: 24px 0 24px 24px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    border-top:2px solid white;
+    border-right:2px solid lavenderblush;
+    border-left:2px solid lavenderblush;
+    border-bottom:2px solid lavenderblush;
+}
+
+.page-caption p{
+    font-size: 18px;
+    font-weight: bold;
+    white-space: pre-line;
+
+}
+
+.page-caption:hover{
+    cursor: pointer;
+}
+
+.page-separator{
+    height: 36px;
+    border-right: 2px solid lightgray;
+    flex: 1;
+}
+
+.border-top{
+    border-top:2px solid lightgray;
+    border-right:2px solid lightgray;
+    border-left:2px solid lightgray;
+    border-bottom:2px solid white;
+}
+
+.border-bottom{
+    border-bottom:2px solid lightgray;
+}
+
+.content{
+    border-right:2px solid lightgray;
+    border-left:2px solid lightgray;
+    border-bottom:2px solid lightgray;
+}
+
+@media (max-width:680px){
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+}

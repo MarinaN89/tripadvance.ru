@@ -1,0 +1,16 @@
+.wrapper{
+    display: flex;
+    align-items: baseline;
+    
+}
+.icon{
+    font-weight: 400;
+}
+
+.price{
+    font-weight: 600;
+    text-overflow: ellipsis;   /* IE, Safari (WebKit) */
+    overflow:hidden;              /* don't show excess chars */
+    white-space:nowrap;
+    font-size: 18px;
+}

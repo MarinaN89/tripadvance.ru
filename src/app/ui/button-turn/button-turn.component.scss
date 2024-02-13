@@ -1,0 +1,18 @@
+
+.button-turn__coneiner{
+    display: flex;
+    justify-content: center;
+}
+.button-turn{
+    background: none;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+ }
+ .button-turn__coneiner{
+    visibility: hidden;
+ }
+ @media (max-width:680px){
+    .button-turn__coneiner{
+        visibility: visible;
+    }
+ }

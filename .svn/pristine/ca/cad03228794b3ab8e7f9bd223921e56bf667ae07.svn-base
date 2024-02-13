@@ -1,0 +1,77 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="header-image">
+            <img class="header-image__img" [attr.src]="this.item.image"/>
+        </div>
+        <div class="right">
+            <div class="header-title">
+                <p class="header-title__komp">Комплектация</p>
+                <p class="header-title__title">{{this.item.name}}</p>
+                <p class="header-title__code">{{this.item.id}} КОД</p>
+            </div>
+            <div class="footer" >
+                
+                <div class="footer-separator"></div>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="list">
+        <div class="list-caption">
+            <div class="list-caption-price">
+                <p class="list-caption__text">Итого</p>
+                <app-price [value]="this.total" [size]="24"></app-price>
+            </div>
+            <div class="list-caption-button">
+                <app-button>Оформить</app-button>
+            </div>
+            
+        </div>
+
+        <div class="list-row">
+            <p class="list-row__active">{{this.item.name}}</p>
+            <div  class="list-row__right">
+                <app-spinner [value]="this.item.count" [min]="1" (onChange)="this.item.count = $event; this.updateTotal()"></app-spinner>
+                <app-price class="list-row__right-price" [value]="this.item.price" [size]="16"></app-price>
+            </div>
+        </div>
+
+        <div class="list-row" *ngFor="let kit of this.kit">
+            <p>{{kit.name}}</p>
+            <div  class="list-row__right">
+                <app-spinner [min]="0" [value]="kit.count" (onChange)="kit.count = $event; this.updateTotal()"></app-spinner>
+                <app-price class="list-row__right-price" [value]="kit.price" [size]="16"></app-price>
+            </div>          
+        </div>
+    </div>
+
+
+    <div class="list">
+        <div class="list-caption">
+            <p class="list-caption__text">ХАРАКТЕРИСТИКИ</p>
+        </div>
+
+        <div (click)="this.openParam(param)" class="list-row pointer" *ngFor="let param of this.parameters">
+            <div class="list-column">
+                <div class="list-row__item">
+                    <p class="list-row__title">{{param.title}}</p>
+                    <p class="points"></p>
+                    <div  class="list-row__right">
+                        <p>{{param.value}}</p>
+                        
+                    </div>
+                    <app-arrow [setOpen]="param.open"></app-arrow>
+                </div>
+                <app-collapse [expanded]="param.open">
+                    <p>{{param.description}}</p>
+                </app-collapse>
+            </div>
+
+        </div>
+    </div>
+
+
+    
+
+</div>

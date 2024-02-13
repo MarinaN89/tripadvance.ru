@@ -1,0 +1,6 @@
+<div class="packet-block pointer">
+    <div class="packet-block__active"></div>
+    <p class="packet-block__text">{{this.name}}</p>
+    <p class="points"></p>
+    <app-arrow  [setOpen]="false"></app-arrow>
+</div>

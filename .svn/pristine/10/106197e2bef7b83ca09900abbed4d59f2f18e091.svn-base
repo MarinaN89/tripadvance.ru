@@ -1,0 +1,39 @@
+.block-hotel{
+
+}
+
+.block-text{
+    margin-top: 48px;
+}
+.block-text__title{
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+.block-text__description{ 
+    margin-top: 0px;
+}
+
+.block-text__description1{ 
+    margin-top: 12px;
+}
+
+.block-text__description2{ 
+    margin-left: 12px;
+    font-weight: 600;
+}
+
+.block-text__link{
+    text-decoration: underline;
+}
+.block-text__link:hover{
+   cursor:pointer;
+}
+
+.block-text__vnim{
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+    margin-bottom: 32px;
+}   
+

@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <app-slider [type]="this.animationType" [duration]="this.animationDuration" [countView]="this.getCountViewSlides()" (onChange)="onChangeSlide($event)">
+        <app-slide>
+            <app-element-present [item]="this.site.elements.presents[0]"></app-element-present>
+        </app-slide>
+        <app-slide>
+            <app-element-present [item]="this.site.elements.presents[1]"></app-element-present>
+        </app-slide>
+        <app-slide>
+            <app-element-present [item]="this.site.elements.presents[2]"></app-element-present>
+        </app-slide>
+        <app-slide>
+            <app-element-present [item]="this.site.elements.presents[3]"></app-element-present>
+        </app-slide>
+    </app-slider>
+</div>

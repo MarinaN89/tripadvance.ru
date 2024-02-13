@@ -1,0 +1,42 @@
+
+
+
+.block-text__group{
+    margin-top: 48px;
+    margin-bottom: 6px;
+}
+
+.block-text__subgroup{
+    margin-bottom: 12px;
+}
+
+.block-text__title{
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 26px;
+}
+.block-text__subtitle{
+    font-size: 20px;
+    font-weight: 500;
+}
+.block-text__description{ 
+    margin-top: 24px;
+    display: flex;
+}
+
+.bold{
+    font-weight: 600;
+}
+
+.line{
+    width: 70px;
+    margin-top: 4px;
+    border-bottom: 2px solid #FFD707;
+}
+
+@media (max-width: 680px){
+    .block-text{
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+}

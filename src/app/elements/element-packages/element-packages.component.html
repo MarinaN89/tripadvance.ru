@@ -1,0 +1,51 @@
+
+<app-panel class="desktop" *ngIf="this.isInit" [setPage]="this.activePacket">
+    <app-panel-page *ngFor="let item of this.item"
+        [title]="item.title"
+        [type]="item.type"
+        [image]="item.image"
+    >
+
+        <div class="packet">
+            <p >{{item.description_detail}}</p>
+
+            <div class="packet-blocks">
+                <div class="packet-block-item pointer" *ngFor="let block of item.blocks">
+                    <div class="packet-block"  (click)="this.changeBlock(item.blocks, block)">
+                        <div *ngIf="block.enabled" class="packet-block__active"></div>
+                        <div *ngIf="!block.enabled" class="packet-block__noactive"></div>
+                        <p class="packet-block__text">{{block.name}}</p>
+                        <p class="points"></p>
+                        <app-arrow  [setOpen]="block.open"></app-arrow>
+                    </div>
+
+                    <app-collapse [expanded]="block.open">
+                        <p style="padding: 24px">{{block.description}}</p>
+                    </app-collapse>
+                </div>
+            </div>
+            <p>
+                {{item.footer}}
+            </p>
+
+            <div class="packet-separator"></div>
+
+            <div class="packet-footer">
+                <div class="packet-footer__item">
+                    <app-button text="">Оформить</app-button>
+                    <p class="packet-footer__price">
+                        <app-price [value]="'от ' + item.price" [size]="18"></app-price>
+                    </p>
+                    
+                </div>
+
+                <div class="attentions">
+                    <div class="attentions-item" *ngFor="let attention of item.attentions">
+                        <app-element-product-text [item]="attention">
+                        </app-element-product-text>
+                    </div>
+                </div>
+            </div>       
+        </div>
+    </app-panel-page>
+</app-panel>

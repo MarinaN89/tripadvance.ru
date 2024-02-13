@@ -1,0 +1,7 @@
+
+<a class="arrow-icon" [class]="arrowClass">
+    <span class="left-bar"></span>
+    <span class="right-bar"></span>
+</a>
+
+

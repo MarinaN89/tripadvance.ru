@@ -1,0 +1,41 @@
+<div class="wrapper">
+    <div class="header">
+        <div class="title">
+            <h1 class="title__text">Внедренные решения</h1>
+            <p class="title__button link">перейти в раздел разработки</p>
+        </div>
+    
+        <div class="buttons">
+            <app-button-slider [small]="true" (onClick)="($event == 1) ? this.next() : this.prev()"></app-button-slider>
+            <!--
+            <p class="button-left pointer" (click)="this.prev()"><</p>
+            <p class="button-right pointer" (click)="this.next()">></p>
+            -->
+        </div>
+    </div>
+
+
+    <div class="line"></div>
+
+    <app-slider [type]="this.animationType" [duration]="this.animationDuration" [countView]="this.getCountViewSlides()">
+        <app-slide >
+            <app-element-minimize [item]="this.site.elements.minimize[0]" height="100%"></app-element-minimize>
+        </app-slide>
+        <app-slide >
+            <app-element-minimize [item]="this.site.elements.minimize[1]" height="100%"></app-element-minimize>
+        </app-slide>
+        <app-slide >
+            <app-element-minimize [item]="this.site.elements.minimize[2]" height="100%"></app-element-minimize>
+        </app-slide>
+        <app-slide >
+            <app-element-minimize [item]="this.site.elements.minimize[0]" height="100%"></app-element-minimize>
+        </app-slide>
+        <app-slide >
+            <app-element-minimize [item]="this.site.elements.minimize[1]" height="100%"></app-element-minimize>
+        </app-slide>
+        <app-slide >
+            <app-element-minimize [item]="this.site.elements.minimize[2]" height="100%"></app-element-minimize>
+        </app-slide>
+    </app-slider>
+
+</div>

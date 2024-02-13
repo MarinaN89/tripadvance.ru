@@ -1,0 +1,29 @@
+
+
+<div #content (click)="onClick($event)" (event)="onEvent($event)">
+    <ng-content></ng-content>
+</div>
+
+<div class="select" #select> 
+    <div *ngIf="showHeader" class="input" (click)="this.onClick($event)" [style.border-width.px]="borderWidth" [style.width.px]="width">
+        <div *ngIf="showImages" class="image" [style.background-image]="'url('+item.image+')'"></div>
+        <div *ngIf="showIcons" class="image">
+            <app-icon [name]="item.icon" size="18"></app-icon>
+        </div>
+        <p class="text" *ngIf="isShowSelectionTitle">{{this.findSelectionItem().title}}</p> 
+        <app-arrow [setOpen]="showPopap"></app-arrow>
+    </div> 
+    
+    <div #popup *ngIf="showPopap" class="popup" [style.top.px]="this.top" [style.left.px]="this.left">
+        <ul>
+            <li class="item" *ngFor="let item_iter of items" (click)="onChange(item_iter)">
+                <div *ngIf="showImages" class="image" [style.background-image]="'url('+item_iter.image+')'"></div>
+                <div *ngIf="showIcons" class="image">
+                    <app-icon [name]="item_iter.icon" size="18"></app-icon>
+                </div>
+                <div >{{item_iter.title}}</div>
+            </li>
+        </ul>
+    </div>
+    <div *ngIf="requred" class="requred">*</div>
+</div>

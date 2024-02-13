@@ -1,0 +1,33 @@
+<div class="wrapper">
+    <div class="wrapper-products">
+        <div class="products">
+            <div class="product">
+                <div class="product-top">
+                    <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                    <div class="product-header">
+                        <div class="product-header__title">
+                            <h3 class="product-header__title_text1">{{this.title}}</h3>
+                            <h3 class="product-header__title_text2">{{this.description}}</h3>
+                        </div>   
+                        <img class="product-header__title_icon" [attr.src]="this.image">
+                    </div>
+                </div>
+                <div class="product-bottom">
+                    <div class="product-navigation">
+                        <div class="product-navigation__button pointer">
+                            <a [attr.href]="this.href">Подробнее</a>
+                        </div>
+                        <p class="product-navigation__service">{{this.type}}</p>
+                    </div>
+                    <p class="product-description">
+                        {{this.text}}
+                    </p>
+                </div>
+            
+                <div class="product-v"></div>
+            </div>
+        </div>
+
+    </div>
+</div>
+

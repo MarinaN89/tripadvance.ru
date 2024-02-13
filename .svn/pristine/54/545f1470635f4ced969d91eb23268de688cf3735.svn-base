@@ -1,0 +1,44 @@
+.wrapper{
+    display:flex;
+}
+
+.image{
+    width: 130px;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+}
+
+.right{
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 24px;
+}
+
+.name{
+    font-size: 14px;
+    width: 200px;
+}
+
+.code{
+    display: flex;;
+    color:grey;
+}
+
+.code__text{
+    margin-left: 4px;
+    color:grey;
+}
+
+.price{
+    color:grey;
+    display: flex;
+}
+
+.button{
+    margin-top: 12px;
+    text-decoration: underline;
+}

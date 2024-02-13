@@ -1,0 +1,12 @@
+.wrapper{
+    max-width: 1440px;
+    margin:0 auto;
+    /*border: 1px solid black;*/
+}
+
+@media (max-width:1380px) {
+    .wrapper{
+        margin: 0px clamp(0px, 2vw, 24px) 0 clamp(0px, 2vw, 24px) !important;
+    }
+
+}

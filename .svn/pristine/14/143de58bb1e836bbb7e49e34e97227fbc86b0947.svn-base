@@ -1,0 +1,91 @@
+
+<!--
+<div class="mobile_hamburger" >
+    <input #hamburger id="toggle" (click)="this.toggleMenu()" type="checkbox"/>
+    <label for="toggle" class="hamburger" >
+        <div class="top-bun" [style.background]="(this.menuOpen) ? 'white' : 'white'"></div>
+        <div class="meat" [style.background]="(this.menuOpen) ? 'white' : 'white'"></div>
+        <div class="bottom-bun" [style.background]="(this.menuOpen) ? 'white' : 'white'"></div>
+    </label>
+
+    <div class="button_search pointer " style="margin-right:12px">
+        <app-search (onChange)="this.openPageSearch($event)"></app-search>
+    </div>
+</div>
+-->
+
+
+<div  class="mobile mobile_menu"> <!--*ngIf="this.menuOpen"-->
+    <app-menu (onChange)="this.openPage($event)"></app-menu>
+</div>
+
+<div class="wrapper">
+    <div class="franch pointer" (click)="this.openPage('')"> 
+        <div class="franch__icon">
+            <app-icon style="height: 60px;" name="Tripadvanse-logo" size ="60" color="#ED3E3E"></app-icon>
+            <div class="franch_1c">
+                <div class="franch_title">
+                    <app-icon style="height: 40px;" name="Logo-1C" size ="50" color="#ED3E3E"></app-icon>
+                    <h5 style="margin-left:6px" class="franch_text">Франчайзи</h5>
+                </div>
+                <h6 class="franch_text">Комплекс услуг для отелей</h6>
+            </div>
+        </div>
+
+        <!--
+
+        -->
+
+    </div>
+    
+    <div class="wrapper_right">
+        <div class="navigation">
+    
+            <div class="navigation_button pointer-underline navigation_adaptive__partner">
+                <p class="navigation_button__text">Наши партнеры</p>
+            </div>
+            <div class="navigation_button pointer-underline navigation_adaptive__training">
+                <p class="navigation_button__text">Обучение</p>
+            </div>
+            <div class="navigation_button pointer-underline navigation_adaptive__consultation">
+                <app-icon class="navigation_consultation" name="icon3" size="14" ></app-icon>
+                <p class="navigation_button__text">Бесплатная консультация</p>
+            </div>
+
+            <!--(onChange)="this.setObjectAction(object, $event.value)"-->
+
+            <app-select class="navigation_adaptive__select" [showHeader]='false' [items]="this.getNavigationAction()" > 
+                <div class="select-action pointer">
+                    <p class="select-action__button">...</p>
+                </div>
+            </app-select> 
+            
+
+        </div>
+    
+        <div class="contacts">
+            <p class="contacts_phone pointer">
+                8 (861) 213-23-13
+            </p>
+            <a class="contacts_email pointer" href="mailto:acc@eacentr.ru">
+                acc@eacentr.ru
+            </a>
+        </div>
+    
+        <!--        
+        <div class="account">
+            <app-icon class="account_icon pointer" name="icon1" size="14" ></app-icon>
+            <div class="accont_separator"></div>
+            <app-icon class="account_icon pointer" name="icon2" size="14" ></app-icon>
+        </div>
+
+        -->
+
+    </div>
+   
+</div>
+
+<div class="desktop" style="margin-top:12px">
+    <app-menu (onChange)="this.openPage($event)"></app-menu>
+  </div>
+

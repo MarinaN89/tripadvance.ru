@@ -1,0 +1,164 @@
+
+.block-baner__footer{
+    border-bottom: 1px solid lightgrey;
+    border-right: 1px solid lightgrey;
+    border-left: 1px solid lightgrey;
+    display: flex;
+    margin-top: -4px;
+    line-height: 18px;
+    border-radius: 0 0 8px  8px;
+}
+
+.block-baner__footer-left{
+    border-right: 1px solid lightgrey;
+    padding: 12px 24px;
+    display: flex;
+}
+
+.block-baner__footer-right{
+    padding: 12px 24px;
+    display: flex;
+}
+
+.block-baner__footer-group{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+    padding-left: 24px;
+    padding-top: 6px;
+}
+
+.block-baner__footer__title{
+    font-size: 18px;
+    font-weight: bold;
+}
+.block-baner__footer__description{
+    margin-top: 12px;
+    font-size: 16px;
+}
+.new-block__button{
+    margin-top: 12px;
+    display: flex;
+}
+.new-block__button-text{
+    color: #ED3E3E;
+    font-weight: 700;
+}
+.new-block__button-arrow{
+    margin-left: 6px;
+}
+
+.block-baner{
+    position: relative;
+}
+.block-baner__title{
+    font-size:42px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 42px;
+}
+.block-baner__subtitle{
+    font-size:18px;
+    color: #fff;
+    font-weight: 400;
+    line-height: 22px;
+    margin-top: 55px;
+}
+.block-baner__subtitle:nth-child(2n){
+    margin-top: 0;
+}
+.block-baner__price{
+    font-size:36px;
+    color: #fff;
+    padding-top: 10px;
+    font-weight: 600;
+    line-height: 40px;
+    margin-bottom: 12px;
+}
+
+.block-baner__container{
+    background-size: cover;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap-reverse;
+    padding-top: 48px;
+    padding-bottom: 48px;
+    margin-bottom: 5px;
+    border-radius: 7px 7px 0 0;
+}
+
+
+@media (min-width: 320px) and (max-width: 1067px){
+    .block-baner__container{
+       padding: 20px;
+    }
+    .block-baner__title{
+       margin-top: 30px;
+    }
+    .block-baner__title:nth-child(2n){
+        margin-top: 0;
+     }
+     
+}
+@media (min-width: 348px) and (max-width: 1002px){
+    .block-baner__title{
+       font-size: 40px;
+       padding-left: 10px;
+       line-height: 40px;
+    }
+    .block-baner__subtitle{
+        padding-left: 10px;
+    }
+    .block-baner__price{
+        font-size:32px;
+        padding-left: 10px;
+        margin-bottom: 10px;
+    }
+    .block-baner__button{
+        padding-left: 10px;
+    }
+    .block-baner__footer{
+        flex-direction: column;
+    }
+    .block-baner__footer-left{
+        border-bottom: 1px solid lightgrey;
+    }
+     
+}
+@media (min-width: 320px) and (max-width: 348px){
+    .block-baner__title{
+        font-size: 36px;
+        padding-left: 12px;
+        line-height: 38px;
+     }
+     .block-baner__subtitle{
+        padding-left: 12px;
+    }
+    .block-baner__price{
+        font-size:28px;
+        padding-left: 12px;
+    }
+    .block-baner__button{
+        padding-left: 12px;
+    }
+    .block-baner__footer{
+        flex-direction: column;
+    }
+    .block-baner__footer-left{
+        border-bottom: 1px solid lightgrey;
+    }
+}
+@media (min-width: 320px) and (max-width: 340px){
+    .block-baner__img{
+       max-width: 280px;
+    }
+     
+}
+@media (min-width: 320px) and (max-width: 681px){
+    .block-baner__container{
+        border-radius:0;
+     }
+     
+}
+

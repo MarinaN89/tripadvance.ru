@@ -1,0 +1,55 @@
+
+<div class="block-baner">
+    <!--<img style="width:100%" [attr.src]="this.item.image"/>-->
+    <div class="block-baner__container" [style.background-image]="this.item.image">
+        <div class="block-baner__text-contenier" *ngIf="this.item.texts != undefined">
+            <h2 class="block-baner__title">{{this.item.texts.titleBanner1}}</h2>
+            <h2 class="block-baner__title">{{this.item.texts.titleBanner2}}</h2>
+            <p class="block-baner__subtitle" *ngIf="this.item.texts.subtitleBanner1 != undefined">{{this.item.texts.subtitleBanner1}}</p>
+            <p class="block-baner__subtitle" *ngIf="this.item.texts.subtitleBanner2 != undefined">{{this.item.texts.subtitleBanner2}}</p>
+            <p class="block-baner__price" *ngIf="this.item.texts.priceBanner != undefined">{{this.item.texts.priceBanner}}</p>
+            <app-button class="block-baner__button">Подробнее</app-button>
+        </div>
+        <img *ngIf="this.item.texts != undefined" class="block-baner__img" [attr.src]="this.item.texts.image1"/>
+    </div>
+    <div class="block-baner__footer">
+        <div *ngIf="this.item.left != undefined" class="block-baner__footer-left">
+            <img width="40px" height="30px" [attr.src]="this.item.left.image"/>
+
+            <div class="block-baner__footer-group">
+                
+                <p class="block-baner__footer__title">
+                    {{this.item.left.title}}
+                </p>
+
+                <p class="block-baner__footer__description">  
+                    {{this.item.left.description}}
+                </p>
+
+                <div class="new-block__button">
+                    
+                    <app-button-detail>Подробнее</app-button-detail>
+                    
+                </div>
+            </div>
+
+        </div>
+        <div *ngIf="this.item.right != undefined" class="block-baner__footer-right">
+            <img width="40px" height="30px"  [attr.src]="this.item.right.image"/>
+
+            <div class="block-baner__footer-group">
+                
+                <p class="block-baner__footer__title">
+                    {{this.item.right.title}}
+                </p>
+
+                <p class="block-baner__footer__description">  
+                    {{this.item.right.description}}
+                </p>
+                <div class="new-block__button">
+                    <app-button-detail>Подробнее</app-button-detail>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

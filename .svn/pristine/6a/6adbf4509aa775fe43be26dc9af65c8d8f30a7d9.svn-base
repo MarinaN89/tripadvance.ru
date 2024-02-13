@@ -1,0 +1,29 @@
+<div class="wrapper" 
+[style.height]="this.height"
+[style.padding]="this.padding">
+
+    <div *ngIf="this.item.image != undefined" class="left" >
+        <img class="image" [attr.src]="this.item.image"/>
+    </div>
+
+    <div class="right">
+        <p *ngIf="this.item.new == true" class="new-block__text1">Новое</p>
+        <div class="block">
+            <h4 *ngIf="this.item.title != '' && this.item.title != undefined" class="new-block__title" [style.font-size.px]="this.sizeTitle">{{this.item.title}}</h4>
+            <p class="new-block__description">{{this.item.description}}</p>
+        </div>
+    
+        <app-button-detail class="new-block__button">
+            Подробнее
+        </app-button-detail>
+        <!--
+
+        
+        <div class="new-block__button">
+            <a [attr.href]="this.item.href" class="new-block__button-text" >Подробнее</a>
+            <app-icon class="new-block__button-arrow" name="arrow-right" color="red" size="6px"></app-icon>
+        </div>
+        -->
+    </div>
+
+</div>

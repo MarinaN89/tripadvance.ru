@@ -1,0 +1,32 @@
+import { AfterViewInit, Component, OnInit, Input, Output, EventEmitter, Renderer2, ViewChild, ElementRef, HostListener } from '@angular/core';
+import { Router, ActivatedRoute, Params} from '@angular/router';
+import { SiteService } from '../../site.service';
+
+@Component({
+  selector: 'app-cash-registers',
+  templateUrl: './devices-cash-registers.component.html',
+  styleUrls: ['./devices-cash-registers.component.scss']
+})
+export class DevicesCashRegistersComponent {
+
+  allProducts: any = true;
+
+  constructor(
+    private renderer: Renderer2, private router: Router, private route: ActivatedRoute, public site:SiteService,
+  ) {
+    
+  }
+  ngOnInit(){
+    console.log(this.router.url);
+    var id = "";
+
+    this.route.params.subscribe(
+      (params: Params) => {
+       id = params['id'];
+      }
+    );
+
+    console.log(id);
+  }
+
+}

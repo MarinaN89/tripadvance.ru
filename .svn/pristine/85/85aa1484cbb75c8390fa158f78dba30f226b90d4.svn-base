@@ -1,0 +1,17 @@
+<app-page-content
+    title = "Облачные кассы"
+    
+    >
+
+    <div *ngIf="this.allProducts" class="products">
+        <div *ngFor="let item of this.site.cashRegisters" class="products__item">
+            <app-product 
+                [name]="item.name"
+                [code]="''"
+                [price]="65000"
+                [src]="'assets/products/atol55f.png'">
+            </app-product>
+        </div>
+    </div>
+
+</app-page-content>

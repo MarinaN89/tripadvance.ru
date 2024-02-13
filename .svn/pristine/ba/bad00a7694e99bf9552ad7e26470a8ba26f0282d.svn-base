@@ -1,0 +1,223 @@
+body, html{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  min-height:100vh;
+}
+
+footer{
+  margin-top: auto;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    /*font-weight: bold;*/
+    font-size: small;
+}
+
+
+.underline{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.pointer{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.pointer-underline{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.noselect{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.pointer:hover{
+    cursor: pointer;
+}
+
+.pointer-underline:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.text-green{
+    color: #06667E;
+}
+
+.background-green{
+    background-color: #06667E;
+}
+
+
+body{
+  margin: 0;
+  padding: 0;
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+
+p, a, li, strong, ul, span, td, textarea {
+  font-family: 'Inter', sans-serif; 
+  font-size:14px;
+  color:#243254;
+}
+
+h1, h2, h3, h4, h5, h6, th {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  color:#243254;
+  letter-spacing: -1px;
+}
+
+h3{
+  font-size: 18px;
+} 
+
+h4{
+  font-size: 16px;
+} 
+
+h2{
+  font-size: 20px;
+}
+
+h1{
+  font-size: 22px;
+}
+
+
+h5, th{
+  font-size:15px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.select-action__button{
+  font-size: 45px !important;
+  line-height: 0px;
+  top: -6px;
+  left: 6px;
+  height: 0px;
+  position: relative;
+  letter-spacing: -3px;    
+}
+
+.select-action{
+  width: 41px;
+  height: 14px;
+  border-radius: 8px;
+  color: grey;
+}
+
+.select-action:hover{
+  color: black;
+}
+
+
+.mobile{
+}
+
+.desktop{
+}
+
+@media (min-width:680px){
+  .mobile{
+    display: none !important;
+  }
+}
+
+@media (max-width:680px){
+  .desktop{
+    display: none !important;
+  }
+}
+
+.points{
+  width: 100%;
+}
+.points:after {
+  content: "\A0";
+  display: block;
+  overflow: hidden;
+  margin-top: -6px;
+  background-image: linear-gradient(to right, black 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+}
+
+.points-noactive{
+  width: 100%;
+}
+.points-noactive:after {
+  content: "\A0";
+  display: block;
+  overflow: hidden;
+  margin-top: -6px;
+  background-image: linear-gradient(to right, lightgray 33%, rgba(255,255,255,0) 0%);
+  background-position: bottom;
+  background-size: 3px 1px;
+  background-repeat: repeat-x;
+}
+
+.link{
+  text-decoration: underline;
+  cursor:pointer;
+}
+
+.link:hover{
+  color:#ED3E3E;
+}

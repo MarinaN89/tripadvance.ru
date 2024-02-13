@@ -1,0 +1,13 @@
+<!--
+<div class="wrapper">
+    <div [class]="arrowClass"></div>
+</div>
+-->
+
+
+<a class="arrow-icon" [class]="arrowClass">
+    <span class="left-bar"></span>
+    <span class="right-bar"></span>
+  </a>
+
+

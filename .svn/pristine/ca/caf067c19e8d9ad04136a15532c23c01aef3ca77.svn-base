@@ -1,0 +1,290 @@
+
+
+<div class="line desktop">
+
+</div>
+
+
+
+<nav class="desktop">
+    
+ <ul class="wrapper topmenu ">
+    <!--
+            <li *ngFor="let item of this.site.menu">
+        <div (click)="this.setMenuActive($event) " class="menu_button menu_adaptive__service">     
+            <a [attr.href]="item.href != undefined ? item.href: null"  class="menu_button__text">{{item.title}}</a>
+            <app-arrow *ngIf="item.items.length > 0" class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+        </div>
+
+        <ul *ngIf="item.items.length > 0" class="submenu">
+            <li *ngFor="let item2 of item.items">
+                <a [attr.href]="item2.href != undefined ? item2.href: null">{{item2.title}}<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu">
+                    <li *ngFor="let item3 of item2.items">
+                        <a [attr.href]="item3.href != undefined ? item3.href: null">{{item3.title}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    -->
+    <li *ngFor="let item of this.site.menu">
+        <div [attr.title]="item.title" (click)="this.setMenuActive($event)" [class.menu_button__active]="this.IsActiveMenu(item)"class="menu_button menu_adaptive__service">     
+            <a (click)="this.navigateTo(item.href)" rel="nofollow" [attr.href]="item.href" class="menu_button__text">{{item.title}}</a>
+            <app-arrow *ngIf="item.items.length > 0" class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+        </div>
+
+        <ul *ngIf="item.items.length > 0" class="submenu">
+            <li *ngFor="let item2 of item.items">
+                <a (click)="this.navigateTo(item2.href)" rel="nofollow" [attr.href]="item2.href" >{{item2.title}}<span class="fa fa-angle-down"></span></a>
+                <ul class="submenu">
+                    <li *ngFor="let item3 of item2.items">
+                        <a (click)="this.navigateTo(item3.href)" rel="nofollow"  [attr.href]="item3.href">{{item3.title}}</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+
+    <!--
+
+    
+    <li *ngFor="let item of this.menu">
+        <div (click)="this.setMenuActive($event) " class="menu_button menu_adaptive__service">
+            <a  class="menu_button__text">{{item.title}}</a>
+            <app-arrow *ngIf="item.items.length > 0" class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+            
+            <ul class="submenu">
+                <li *ngFor="let item2 of item.items">
+                    <a href="">{{item2.title}}<span class="fa fa-angle-down"></span></a>
+          
+                    <ul class="submenu">
+                        <li *ngFor="let item3 of item2.items">
+                            <a href="">{{item3.title}}</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </li>
+    -->
+
+
+    <!--
+
+    
+        <li #main class="menu_button menu_adaptive__main" (click)="this.setMenuActive(this.menuMain)" (mouseenter)="this.setMenuMouseEnter('main')">
+            <a  class="menu_button__text">Главная</a>
+        </li>
+        <li #services   (mouseenter)="this.setMenuMouseEnter('service')" >
+            <div (click)="this.setMenuActive(this.menuServices) " class="menu_button menu_adaptive__service">
+                <a  class="menu_button__text">Услуги</a>
+                <app-arrow class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+            </div>
+
+            <ul class="submenu">
+                <li><a href="">Внедрение<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                      <li><a href="">1С:Отель</a></li>
+                      <li><a href="">1С:Бухгалтерия предприятия</a></li>
+                      <li><a href="">1С:Управление торговлей</a></li>
+                      <li><a href="">1С:Розница</a></li>
+                      <li><a href="">1С:Трактир</a></li>
+                      <li><a href="">Битрикс 24</a></li>
+                      <li><a href="">Модуль бронирования</a></li>
+                    </ul>
+                </li>
+                
+                <li><a href="">Сопровождение 1С<span class="fa fa-angle-down"></span></a>
+                  <ul class="submenu">
+                    <li><a href="">1С:Отель</a></li>
+                    <li><a href="">1С:Бухгалтерия предприятия</a></li>
+                    <li><a href="">1С:Управление торговлей</a></li>
+                  </ul>
+                </li>
+                <li><a href="">Программирование 1С<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">Печатный формы</a></li>
+                        <li><a href="">Отчеты</a></li>
+                        <li><a href="">Обработки</a></li>
+                        <li><a href="">Расширение</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Обучение 1С<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">Индивидуальное обучение</a></li>
+                        <li><a href="">Онлайн обучение</a></li>
+                        <li><a href="">Обучение в классе</a></li>
+                    </ul>
+                </li>
+                <li><a href="">1С:ФРЕШ</a></li>
+                <li><a href="">1С:ГРМ</a></li>
+            </ul>
+        </li>
+
+        <li #devices (mouseenter)="this.setMenuMouseEnter('device')">
+            <div (click)="this.setMenuActive(this.menuDevices) " class="menu_button menu_adaptive__device">
+                <a  class="menu_button__text">Оборудование</a>
+                <app-arrow class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+            </div>
+            <ul class="submenu">
+                <li><a href="">Онлайн кассы</a></li>
+                <li><a href="">Фискальные накопители</a></li>
+                <li><a href="">RFID считыватели</a></li>
+                <li><a href="">Сканеры</a></li>
+                <li><a href="">Электронные замки</a></li>
+                <li><a href="">POC терминалы</a></li>
+                <li><a href="">Принтеры чеков</a></li>
+            </ul>
+        </li>
+        <li #programs (mouseenter)="this.setMenuMouseEnter('programs')">
+            <div (click)="this.setMenuActive(this.menuPrograms) " class="menu_button menu_adaptive__programs">
+                <a  class="menu_button__text">Программы</a>
+                <app-arrow class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+            </div>
+            <ul class="submenu">
+
+                <li><a href="">1С:Предприятие<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">1С:Отель</a></li>
+                        <li><a href="">1С:Бухгалтерия</a></li>
+                        <li><a href="">1С:Управление нашей фирмой</a></li>
+                        <li><a href="">1С:Управление торговлей</a></li>
+                        <li><a href="">1С:Розница</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Битрикс 24<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">CRM</a></li>
+                        <li><a href="">Автоматизация</a></li>
+                        <li><a href="">Сайты</a></li>
+                    </ul>
+                </li>
+                
+
+                <li><a href="">Iiko (Айко)<span class="fa fa-angle-down"></span></a>
+                    <ul class="submenu">
+                        <li><a href="">iiko (Айко) – комплексное решение</a></li>
+                        <li><a href="">Приложение для официантов iikoWaiter</a></li>
+                        <li><a href="">Модуль для 1С:Отель</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </li>
+        <li #developments  (mouseenter)="this.setMenuMouseEnter('development')">
+
+            <div (click)="this.setMenuActive(this.menuDevelopments) " class="menu_button menu_adaptive__development">
+                <a  class="menu_button__text">Разработки</a>
+                <app-arrow class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+            </div>
+            <ul class="submenu">
+                <li><a href="/booking-module">Модуль бронирования</a></li>
+                <li><a href="">Управление контролем доступа</a></li>
+            </ul>
+
+        </li>
+        <li #integrations class="menu_button menu_adaptive__integration" (click)="this.setMenuActive(this.menuIntegrations)"  (mouseenter)="this.setMenuMouseEnter('integration')">
+            <a class="menu_button__text">Интеграции</a>
+            <app-arrow class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+        </li>
+        <li #company (mouseenter)="this.setMenuMouseEnter('company')">
+            <div (click)="this.setMenuActive(this.menuCompany) " class="menu_button menu_adaptive__company">
+                <a  class="menu_button__text">О компании</a>
+                <app-arrow class="menu_button__arrow desktop" [setOpen]="false"></app-arrow>
+            </div>
+            <ul class="submenu">
+                <li><a href="">О нас</a></li>
+                <li><a href="">Партнеры</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">Вакансии</a></li>
+            </ul>
+        </li>
+    
+        <li #contacts class="menu_button menu_adaptive__contacts" (click)="this.setMenuActive(this.menuContacts)" (mouseenter)="this.setMenuMouseEnter('contacts')">
+            <a  class="menu_button__text">Контакты</a>
+        </li>
+
+        -->
+</ul>
+    
+
+
+</nav>
+
+   <!--
+<div #active class="menu_button__active desktop"></div>
+   -->
+
+
+    
+
+<app-select class="menu_button__select menu_adaptive__select desktop" [left]="-120" [showHeader]='false' [items]="this.getMenuAction()" > 
+    <div class="select-action pointer">
+        <p class="select-action__button">...</p>
+    </div>
+</app-select> 
+
+<div class="wrapper mobile" #wrapper>
+
+    <header class="nav-top">
+        <app-search></app-search>
+        <span class="hamburger material-icons" id="ham" (click)="this.toggleNav()">menu</span>
+    </header>
+    
+    <nav class="nav-drill">
+      <ul class="nav-items nav-level-1">
+        <li *ngFor="let item of this.site.menu" class="nav-item nav-expand">
+
+            <a [class.nav-expand-link]="item.items.length>0" class="nav-link" [attr.href]="item.href">
+                {{item.title}}
+            </a>
+
+            <ul *ngIf="item.items.length > 0" class="nav-items nav-expand-content">
+                <li class="nav-item">
+                    <a class="nav-link nav-back-link" href="javascript:;">
+                        Назад
+                    </a>
+                </li>
+
+                <li *ngFor="let item2 of item.items" class="nav-item nav-expand">
+                    <a [class.nav-expand-link]="item2.items.length>0" class="nav-link "  [attr.href]="item2.href">
+                        {{item2.title}}
+                    </a>
+                    <ul *ngIf="item2.items.length > 0" class="nav-items nav-expand-content">
+                        <li class="nav-item">
+                            <a class="nav-link nav-back-link" href="javascript:;">
+                                Назад
+                            </a>
+                        </li>
+
+                        <li *ngFor="let item3 of item2.items"  class="nav-item ">
+                            <a  class="nav-link"  [attr.href]="item3.href">
+                                {{item3.title}}
+                            </a>
+                            
+                        </li>
+                        
+                    </ul>
+                </li>
+                
+            </ul>
+        </li>
+      </ul>
+    </nav>
+    
+    
+</div>
+
+<!--
+<div #active class="menu_button__active desktop"></div>
+-->
+
+
+    
+
+<app-select class="menu_button__select menu_adaptive__select desktop" [left]="-120" [showHeader]='false' [items]="this.getMenuAction()" > 
+    <div class="select-action pointer">
+        <p class="select-action__button">...</p>
+    </div>
+</app-select> 

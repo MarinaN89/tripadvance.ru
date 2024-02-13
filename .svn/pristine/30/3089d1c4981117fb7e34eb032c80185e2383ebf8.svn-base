@@ -1,0 +1,36 @@
+<div class="wrapper">
+    
+    <app-element-breadcrumbs [item]="this.page.breadcrumbs"></app-element-breadcrumbs>
+    
+    <div class="caption">
+        <p class="caption__text">{{this.page.title}}</p>
+    </div>
+    <div class="description">
+        <p class="description__text">{{this.page.description}}</p>
+    </div>
+
+    <div class="content">
+        <div class="left">
+            <app-left-menu ngSkipHydration></app-left-menu>
+           
+            <div class="left-separator"></div>
+            
+            <app-element-minimize [item]="this.site.elements.minimize[6]"></app-element-minimize>
+
+            <div class="left-separator"></div>
+
+            <app-element-minimize [item]="this.site.elements.minimize[7]"></app-element-minimize>
+
+
+            <div *ngFor="let item of this.site.elements.dicisions">
+                <div class="left-separator"></div>
+                <app-element-dicision [item]="item"></app-element-dicision>
+            </div>
+            
+        </div>
+
+        <div class="right">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

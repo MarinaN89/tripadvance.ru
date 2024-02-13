@@ -1,0 +1,290 @@
+
+<div class="wrapper">
+
+    <div class="title">
+        <h1 class="title__text1">КОМПЛЕКС РЕШЕНИЙ</h1>
+        <div class="title__block2">
+            <p class="title__text2">Широкий спектр услуг и возможностей для гостиничного бизнеса, в программе 1С:ОТЕЛЬ/2023</p>
+
+        </div>
+    </div>
+
+    <app-button-slider (onClick)="($event == 1) ? this.productNext() : this.productPrev()">
+
+    </app-button-slider>
+    <!--
+
+    
+    <div class="buttons desktop">
+        <p class="button-left pointer" (click)="this.productPrev()"><</p>
+        <p class="button-right pointer" (click)="this.productNext()">></p>
+    </div>
+    -->
+</div>
+
+<div class="wrapper-products">
+
+    <div class="new">
+        
+        <div class="new-block">
+            <app-element-minimize sizeTitle="16" [item]="this.site.elements.minimize[3]" padding="0px"></app-element-minimize>
+        </div>
+
+        <!--
+        <div class="new-separator desktop"></div>
+-->
+        <div class="new-block">
+            <app-element-minimize sizeTitle="16"  [item]="this.site.elements.minimize[4]" padding="0px"></app-element-minimize>
+        </div>
+
+    </div>
+
+    <div class="products">
+        <app-slider [type]="this.animationType" [countView]="this.getCountProductView()" [duration]="500">
+            
+            <app-slide *ngFor="let item of this.site.elements.dicisions">
+                
+
+                
+                <div class="desktop"  style="width:48px"></div>
+                
+                <app-element-dicision [item]="item" style="height:max-content"></app-element-dicision>
+            </app-slide>
+                       
+        </app-slider>
+    </div>
+    <div class="line desktop">
+        
+    </div>
+</div>
+
+
+<!--
+
+
+<div class="wrapper">
+
+    <div class="title">
+        <h1 class="title__text1">КОМПЛЕКС РЕШЕНИЙ</h1>
+        <div class="title__block2">
+            <p class="title__text2">Широкий спектр услуг и возможностей</p>
+
+        </div>
+    </div>
+
+    <div class="buttons desktop">
+        <p class="button-left pointer" (click)="this.productPrev()"><</p>
+        <p class="button-right pointer" (click)="this.productNext()">></p>
+    </div>
+</div>
+
+<div class="wrapper-products">
+    <div class="new">
+        <div class="new-block">
+            <p class="new-block__text1">Новое</p>
+            <h4 class="new-block__title">1С:Отель + контроль доступа гостей</h4>
+            <p>Интеграция с картами гостя, замками и шлагбаумами на территории отеля</p>
+            <div class="new-block__button">
+                <p class="new-block__button-text" >Подробнее</p>
+                <app-icon class="new-block__button-arrow" name="arrow-right" color="red" size="6px"></app-icon>
+            </div>
+        </div>
+
+        <div class="new-separator desktop"></div>
+        <div class="new-block  desktop">
+            <h4 class="new-block__title">Формирование сделки в Битрикс 24 </h4>
+            <p>Создание сделки бронирования напрямую в CRM, а так же изменение статуса брони</p>
+            <div class="new-block__button">
+                <p class="new-block__button-text" >Подробнее</p>
+                <app-icon class="new-block__button-arrow" name="arrow-right" color="red" size="6px"></app-icon>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="products">
+        <div class="buttons-mobile mobile">
+            <p class="button-mobile-left pointer" (click)="this.productPrev()"><</p>
+            <p class="button-mobile-right pointer" (click)="this.productNext()">></p>
+        </div>
+        <app-slider [type]="this.animationType" [countView]="this.getCountProductView()" [duration]="500">
+            <app-slide>
+
+                <div class="desktop" style="width:24px"></div>
+                <div class="product">
+                    <div class="product-top">
+                        <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                        <div class="product-header">
+                            <div class="product-header__title">
+                                <h3 class="product-header__title_text1">ВНЕДРЕНИЕ И СОПРОВОЖДЕНИЕ</h3>
+                                <h3 class="product-header__title_text2">Комплекс услуг по сопровождению и внедрению 1С</h3>
+                            </div>   
+                            <img class="product-header__title_icon" src="/assets/main/product1.png"/>
+                        </div>
+        
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-navigation">
+                            <div class="product-navigation__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                            <p class="product-navigation__service">Услуги</p>
+                        </div>
+                        <p class="product-description">
+                            Проведем анализ, разработаем проект внедрения и сопровождения. Настроим и обучим сотрудников.
+                        </p>
+                    </div>
+        
+                    <div class="product-v"></div>
+                </div>
+                
+            </app-slide>
+            <app-slide>
+                <div class="desktop"  style="width:24px"></div>
+                <div class="product">
+                    <div class="product-top">
+                        <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                        <div class="product-header">
+                            <div class="product-header__title">
+                                <h3 class="product-header__title_text1">БИТРИКС 24 ИНТЕГРАЦИЯ CRM </h3>
+                                <h3 class="product-header__title_text2">Автоматизация и структурирование</h3>
+                            </div>   
+                            <img class="product-header__title_icon" src="/assets/main/product2.png"/>
+                        </div>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-navigation">
+                            <div class="product-navigation__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                            <p class="product-navigation__service">Услуги</p>
+                        </div>
+                        <p class="product-description">
+                            Индивидуальный сценарий всех этапов. Формирование воронок продаж, работа с данными.
+                        </p>
+                    </div>
+        
+                    <div class="product-v"></div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div class="desktop"  style="width:24px"></div>
+                <div class="product">
+                    <div class="product-top">
+                        <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                        <div class="product-header">
+                            <div class="product-header__title">
+                                <h3 class="product-header__title_text1">ПРОГРАММНЫЕ ПРОДУКТЫ </h3>
+                                <h3 class="product-header__title_text2">1С:Отель, 1С:Розница, 1С:Трактиръ, Битрикс 24, liko</h3>
+                            </div>   
+                            <img class="product-header__title_icon" src="/assets/main/product3.png"/>
+                        </div>
+
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-navigation">
+                            <div class="product-navigation__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                            <p class="product-navigation__service">Программы</p>
+                        </div>
+                        <p class="product-description">
+                            Комплекс продуктов 1С. Типовые и индивидуальные конфигураций. Популярные CRM-системы.
+                        </p>
+                    </div>
+
+                    <div class="product-v"></div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div class="desktop"  style="width:24px"></div>
+                <div class="product">
+                    <div class="product-top">
+                        <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                        <div class="product-header">
+                            <div class="product-header__title">
+                                <h3 class="product-header__title_text1">ОБОРУДОВАНИЕ И ПОДКЛЮЧЕНИЕ</h3>
+                                <h3 class="product-header__title_text2">Кассы-онлайн, сканеры штрих</h3>
+                            </div>   
+                            <img class="product-header__title_icon" src="/assets/main/product4.png"/>
+                        </div>
+        
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-navigation">
+                            <div class="product-navigation__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                            <p class="product-navigation__service">Услуги</p>
+                        </div>
+                        <p class="product-description">
+                            Подберем оборудование по вашим требованиям, настроем работу по сети, поможем с регистрацией
+                        </p>
+                    </div>
+        
+                    <div class="product-v"></div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div class="desktop"  style="width:24px"></div>
+                <div class="product">
+                    <div class="product-top">
+                        <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                        <div class="product-header">
+                            <div class="product-header__title">
+                                <h3 class="product-header__title_text1">КОНТРОЛЬ ДОСТУПА</h3>
+                                <h3 class="product-header__title_text2">Электронные замки, турникеты, карты гостя</h3>
+                            </div>   
+                            <img class="product-header__title_icon" src="/assets/main/product5.png"/>
+                        </div>
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-navigation">
+                            <div class="product-navigation__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                            <p class="product-navigation__service">Услуги</p>
+                        </div>
+                        <p class="product-description">
+                            Подберем оборудование по вашим требованиям, настроем работу по сети, поможем с регистрацией.
+                        </p>
+                    </div>
+        
+                    <div class="product-v"></div>
+                </div>
+            </app-slide>
+            <app-slide>
+                <div class="desktop"  style="width:24px"></div>
+                <div class="product">
+                    <div class="product-top">
+                        <img class="product-top__background" src="/assets/main/product-fon.jpg"/>
+                        <div class="product-header">
+                            <div class="product-header__title">
+                                <h3 class="product-header__title_text1">МОДУЛЬ БРОНИРОВАНИЯ</h3>
+                                <h3 class="product-header__title_text2">Бронирование онлайн, менеджеры каналов + 1С:Отель</h3>
+                            </div>   
+                            <img class="product-header__title_icon" src="/assets/main/product6.png"/>
+                        </div>
+
+                    </div>
+                    <div class="product-bottom">
+                        <div class="product-navigation">
+                            <div class="product-navigation__button pointer">
+                                <p>Подробнее</p>
+                            </div>
+                            <p class="product-navigation__service">Программы</p>
+                        </div>
+                        <p class="product-description">
+                            Прямое бронирование с сайта без комиссии. Гибкая система оплаты, встроенные инструменты продаж.
+                        </p>
+                    </div>
+
+                    <div class="product-v"></div>
+                </div>
+            </app-slide>
+                       
+        </app-slider>
+    </div>
+
+</div>
+-->

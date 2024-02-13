@@ -1,0 +1,69 @@
+<div class="wrapper">
+    <div class="caption">
+        <p class="caption__text">{{this.title}}</p>
+    </div>
+    <div class="description">
+        <p class="description__text">{{this.description}}</p>
+    </div>
+
+    <div class="content">
+        <div class="left">
+            <app-left-menu></app-left-menu>
+           
+            <div class="left-separator"></div>
+            
+            <app-product-minimize
+                isNew="true"
+                title="1С:Отель + контроль доступа гостей"
+                description="Интеграция с картами гостя, замками и шлагбаумами на территории отеля"
+                href="services/integration/hotel"
+            ></app-product-minimize>
+            
+            <div class="left-separator"></div>
+
+            <app-product-minimize
+                isNew="false"
+                title="Формирование сделки в Битрикс 24"
+                description="Создание сделки бронирования напрямую в CRM, а так же изменение статуса брони"
+                href="services/integration/bitrix24"
+            ></app-product-minimize>
+
+            <div class="left-separator"></div>
+            <app-product-decision
+                title="ПРОГРАММНЫЕ ПРОДУКТЫ"
+                description="1С:Отель, 1С:Розница, 1С:Трактиръ, Битрикс 24, liko"
+                image="/assets/main/product3.png"
+                text="Комплекс продуктов 1С. Типовые и индивидуальные конфигураций. Популярные CRM-системы."
+                href="services/integration/hotel"
+            ></app-product-decision>
+            <div class="left-separator"></div>
+
+            <app-product-decision
+                title="ПРОГРАММНЫЕ ПРОДУКТЫ"
+                description="1С:Отель, 1С:Розница, 1С:Трактиръ, Битрикс 24, liko"
+                image="/assets/main/product3.png"
+                text="Комплекс продуктов 1С. Типовые и индивидуальные конфигураций. Популярные CRM-системы."
+            ></app-product-decision>
+            <div class="left-separator"></div>
+            
+            <app-product-decision
+                title="ПРОГРАММНЫЕ ПРОДУКТЫ"
+                description="1С:Отель, 1С:Розница, 1С:Трактиръ, Битрикс 24, liko"
+                image="/assets/main/product3.png"
+                text="Комплекс продуктов 1С. Типовые и индивидуальные конфигураций. Популярные CRM-системы."
+            ></app-product-decision>
+            <div class="left-separator"></div>
+            
+            <app-product-decision
+                title="ПРОГРАММНЫЕ ПРОДУКТЫ"
+                description="1С:Отель, 1С:Розница, 1С:Трактиръ, Битрикс 24, liko"
+                image="/assets/main/product3.png"
+                text="Комплекс продуктов 1С. Типовые и индивидуальные конфигураций. Популярные CRM-системы."
+            ></app-product-decision>
+        </div>
+
+        <div class="right">
+            <ng-content></ng-content>
+        </div>
+    </div>
+</div>

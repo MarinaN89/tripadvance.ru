@@ -1,0 +1,9 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.products__item{
+    margin-bottom: 48px;;
+    margin-right: 48px;;
+}

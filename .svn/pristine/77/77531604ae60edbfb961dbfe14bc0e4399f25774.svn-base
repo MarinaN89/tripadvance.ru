@@ -1,0 +1,65 @@
+import { Component, OnInit, Input, Output, EventEmitter, Renderer2, ViewChild, ViewChildren, ContentChildren, ElementRef, HostListener, ChangeDetectorRef } from '@angular/core';
+import { SliderAnimationType } from '../ui/slider/slider.enum';
+import { SliderComponent } from '../ui/slider/slider.component';
+import { SlideComponent } from '../ui/slide/slide.component';
+
+@Component({
+  selector: 'app-main-baner',
+  templateUrl: './main-baner.component.html',
+  styleUrls: ['./main-baner.component.scss']
+})
+export class MainBanerComponent {
+
+  public currentSlide: number = 0;
+  public countSlides: number = 3;
+  
+
+  public animationType: SliderAnimationType = SliderAnimationType.EaseInOutSine;
+  public animationDuration: number = 1000;
+
+  @ViewChild(SliderComponent) slider!: SliderComponent;
+  @ContentChildren(SlideComponent, { read: ElementRef }) elSliders!: any;
+  @ViewChild("progressBar", { static: false }) progressBar!: ElementRef;
+
+  constructor(private renderer: Renderer2, private cdref: ChangeDetectorRef){
+  }
+
+  ngAfterViewInit(): void{
+    this.slider.autoPlay(true);
+    this.countSlides = this.elSliders.length;
+    console.log(this.countSlides);
+
+    console.log("main-baner", "ngAfterViewInit");
+  }
+
+  ngAfterContentInit(): void{
+    console.log("main-baner", "ngAfterContentInit");
+  }
+
+  getCurrentSlide(){
+    return this.currentSlide;
+  }
+
+  getCountSlides(){
+    return this.countSlides;
+  }
+
+  getCounterColor(value:number){
+    if(this.currentSlide == value)
+      return "#ED3E3E";
+    return "white";
+  }
+
+  changeSlide(event:any){
+    this.currentSlide = event.current;
+  }
+
+  setBaner(value:any){
+    this.slider.setSlide(value);
+  }
+
+  sliderAnimate(event:any){
+    var width = event.durationPercent;
+    this.renderer.setStyle(this.progressBar.nativeElement, 'width', `${width}%`);
+  }
+}

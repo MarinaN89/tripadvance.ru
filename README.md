@@ -1,5 +1,4 @@
-**Интро**
-* [Ссылка на проект в Gihub](https://marinan89.github.io/tripadvance.ru/)
+
 
 
 
